@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.project.projectController.maintenance.projectEmployeeMaintenance.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_project_projectController_maintenance_projectEmployeeMaintenance_ctDynamicsSL_project_projectController_maintenance_projectEmployeeMaintenance_projectEmployeeMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/projectEmployeeMaintenance.asmx</Value>
+    </Setting>
+    <Setting Name="client_project_projectController_maintenance_projectEmployeeMaintenance_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

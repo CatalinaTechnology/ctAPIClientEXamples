@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.fieldService.serviceDispatch.maintenance.serviceEmployeeMaintenance.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_fieldService_serviceDispatch_maintenance_serviceEmployeeMaintenance_ctDynamicsSL_fieldService_serviceDispatch_maintenance_serviceEmployeeMaintenance_serviceEmployeeMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/serviceEmployeeMaintenance.asmx</Value>
+    </Setting>
+    <Setting Name="client_fieldService_serviceDispatch_maintenance_serviceEmployeeMaintenance_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,13 @@
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\bin\client.projectTravelAndExpenseEntry.exe.config
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\bin\client.projectTravelAndExpenseEntry.XML
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\bin\client.projectTravelAndExpenseEntry.exe
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\bin\client.projectTravelAndExpenseEntry.pdb
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\bin\ctStandardLib.xml
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.csprojResolveAssemblyReference.cache
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.employeesPopup.resources
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.Form1.resources
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.Properties.Resources.resources
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.expenseReportsPopup.resources
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.csproj.GenerateResource.Cache
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.exe
+E:\Source\Solomon Integration\client.projectTravelAndExpenseEntry\obj\Debug\client.projectTravelAndExpenseEntry.pdb

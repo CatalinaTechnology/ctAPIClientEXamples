@@ -1,0 +1,2689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL">
+      <s:element name="about">
+        <s:complexType />
+      </s:element>
+      <s:element name="aboutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aboutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editScreen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inScreen" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="screen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="myPJINVHDR" type="tns:PJINVHDR" />
+          <s:element minOccurs="0" maxOccurs="1" name="myPJInvDet" type="tns:ArrayOfPJInvDet" />
+          <s:element minOccurs="0" maxOccurs="1" name="myPJInvDet_TRD" type="tns:ArrayOfPJInvDet" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJINVHDR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="approver_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ar_post_code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ASID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseCuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="batch_id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="begin_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryEffDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryRate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Curygross_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Curyother_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Curypaid_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Curyretention_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Curytax_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="customer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="docdesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="doctype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="end_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="end_period" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="fiscalno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="gross_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id10" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id17" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ih_id18" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id19" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ih_id20" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="invoice_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoice_num" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoice_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inv_attach_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inv_format_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="inv_status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="last_bill_date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="other_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="paid_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="preparer_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project_billwith" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="retention_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipperID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="slsperid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="start_period" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="tax_amt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="WSID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPJInvDet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJInvDet" nillable="true" type="tns:PJInvDet" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJInvDet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct_rev" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="adj_amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="adj_units" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="bill_status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="burdened_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="comment" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cost_amt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryAdj_amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryHold_amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryOrig_amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryRate" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTranamt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="data1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="data3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="employee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="entry_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="equip_id" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fee_rate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="fiscalno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_offset_cpnyid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_offset_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_offset_subacct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_subacct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="hold_status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="hold_amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="hold_units" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id10" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id17" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="in_id18" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id19" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id20" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id21" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id22" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="in_id23" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="labor_class_cd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="linenbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="li_type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="offset_cd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="orig_amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="orig_rate" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="orig_units" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="pjt_entity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="post_to_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project_billwith" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rate_type_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipperID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipperLineRef" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="source_trx_date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="source_trx_id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subcontract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubTask_Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="taxcatid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="taxId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="taxitembasis" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="unit_of_measure" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="units" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="vendor_num" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="editScreenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editScreenResult" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ctDynamicsSLHeader" type="tns:ctDynamicsSLHeader" />
+      <s:complexType name="ctDynamicsSLHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpnyID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="editPJINVHDR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:PJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editPJINVHDRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editPJINVHDRResult" type="tns:PJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editPJInvDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editPJInvDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editPJInvDetResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editPJInvDet_TRD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editPJInvDet_TRDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editPJInvDet_TRDResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewscreen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewscreenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewscreenResult" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJINVHDR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:PJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJINVHDRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewPJINVHDRResult" type="tns:PJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJInvDet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJInvDetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewPJInvDetResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJInvDet_TRD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewPJInvDet_TRDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewPJInvDet_TRDResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScreenByDraftNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScreenByDraftNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getScreenByDraftNumberResult" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJINVHDRByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJINVHDRByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJINVHDRByIDResult" type="tns:ArrayOfPJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJINVHDR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJINVHDR" nillable="true" type="tns:PJINVHDR" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPJINVHDRByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJINVHDRByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJINVHDRByExactIDResult" type="tns:PJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDraftNumbersByProject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDraftNumbersByProjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDraftNumbersByProjectResult" type="tns:ArrayOfPJINVHDR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDetByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDetByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJInvDetByIDResult" type="tns:ArrayOfPJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDet_TRDByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="draft_num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDet_TRDByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJInvDet_TRDByIDResult" type="tns:ArrayOfPJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDetByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="source_trx_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDetByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJInvDetByExactIDResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDet_TRDByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="source_trx_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPJInvDet_TRDByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPJInvDet_TRDByExactIDResult" type="tns:PJInvDet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProjectsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProjectsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProjectsByIDResult" type="tns:ArrayOfPJPROJ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJPROJ">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJPROJ" nillable="true" type="tns:PJPROJ" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJPROJ">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="alloc_method_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="alloc_method2_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseCuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bf_values_switch" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="billcuryfixedrate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="billcuryid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="billing_setup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="billratetypeid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="budget_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="budget_version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contract" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="contract_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="customer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="end_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_subacct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="labor_gl_acct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manager1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manager2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPInterface" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MSPProj_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="opportunityID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id31" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id32" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id33" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id34" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id35" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id36" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pm_id37" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id38" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id39" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pm_id40" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="probability" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjCuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjCuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjCuryBudEffDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjCuryBudMultiDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProjCuryBudRate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjCuryRevenueRec" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="purchase_order_num" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rate_table_id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="shiptoid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="slsperid" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="start_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_08" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_09" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_17" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_18" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_19" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_20" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_ap" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_ar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_gl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_in" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_lb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_pa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_po" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getProjectsByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProjectsByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProjectsByExactIDResult" type="tns:PJPROJ" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInvoiceTypesByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code_value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getInvoiceTypesByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getInvoiceTypesByIDResult" type="tns:ArrayOfPJCODE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJCODE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJCODE" nillable="true" type="tns:PJCODE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJCODE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="code_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="code_value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="code_value_desc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="data1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="data2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="data3" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="data4" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getSalespersonsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="slsperID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalespersonsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSalespersonsByIDResult" type="tns:ArrayOfSalesperson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSalesperson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Salesperson" nillable="true" type="tns:Salesperson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Salesperson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CmmnPct" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsperId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Territory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCustomersByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomersByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomersByIDResult" type="tns:ArrayOfCustomerV2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerV2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerV2" nillable="true" type="tns:CustomerV2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerV2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrRevAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrRevSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AcctNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplFinChrg" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoApply" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAttn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillSalut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillState" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillThruProject" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillZip" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardExpDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHldrName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConsolInv" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrLmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryPrcLvlRtTp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustFillPriority" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltShipToId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocPublishingFlag" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DunMsg" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvtSubst" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OneDraft" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PmtMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrcLvlId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrePayAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrePaySub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceClassID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrtMCStmt" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrtStmt" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salut" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SetupDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipCmplt" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipPctAct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipPctMax" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="SICCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SICCode2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SingleInvoice" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsperId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StmtCycleId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StmtType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxDflt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxExemptNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxLocId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRegNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Territory" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TradeDisc" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getRateTypesByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code_value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRateTypesByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRateTypesByIDResult" type="tns:ArrayOfPJCODE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTasks">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTasksResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTasksResult" type="tns:ArrayOfPJPENT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJPENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJPENT" nillable="true" type="tns:PJPENT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJPENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="contract_type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="end_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="fips_num" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="labor_class_cd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manager1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPInterface" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPSync" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MSPTask_UID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="opportunityProduct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id31" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id32" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id33" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id34" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id35" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id36" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pe_id37" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id38" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id39" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="pe_id40" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="pjt_entity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="pjt_entity_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="start_date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_08" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_09" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_10" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_17" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_18" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_19" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_20" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_ap" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_ar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_gl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_in" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_lb" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_pa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status_po" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAccountCategoriesForProjectByAcct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="projectID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="acct" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccountCategoriesForProjectByAcctResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAccountCategoriesForProjectByAcctResult" type="tns:ArrayOfPJRULIP" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJRULIP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJRULIP" nillable="true" type="tns:PJRULIP" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJRULIP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adj_cpnyid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adj_gl_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adj_gl_subacct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="bill_type_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpnyid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="credit_cpnyid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="credit_gl_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="credit_gl_subacct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="debit_cpnyid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="debit_gl_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="debit_gl_subacct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_subacct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id05" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id06" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id07" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="rp_id08" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="rp_id09" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="rp_id10" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getEmployeesByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="employee" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEmployeesByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEmployeesByIDResult" type="tns:ArrayOfPJEMPLOY" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJEMPLOY">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJEMPLOY" nillable="true" type="tns:PJEMPLOY" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJEMPLOY">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseCuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="date_hired" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="date_terminated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="employee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="emp_type_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id13" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id14" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id15" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id17" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id18" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id19" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="em_id20" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id21" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id22" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id23" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id24" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="em_id25" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="exp_approval_max" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="gl_subacct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manager1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="manager2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPInterface" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MSPRes_UID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSPType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="placeholder" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="projExec" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="stdday" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stdweek" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subcontractor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="user_id" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getVendorsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vendID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVendorsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getVendorsByIDResult" type="tns:ArrayOfVendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Vendor" nillable="true" type="tns:Vendor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Vendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BkupWthld" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContTwc1099" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Curr1099Yr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltBox" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltOrdFromId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltPurchaseType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DirectDeposit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocPublishingFlag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExcludeFreight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LCCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MultiChk" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Next1099Yr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayDateDflt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PmtMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PPayAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PPaySub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptPctAct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptPctMax" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptPctMin" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="RecipientName2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitAttn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitSalut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemitZip" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReqBkupWthld" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxDflt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxLocId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxPost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRegNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TINNAME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Vend1099" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vend1099AddrType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getLaborClassesByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLaborClassesByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLaborClassesByIDResult" type="tns:ArrayOfPJCODE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTaxIDsByTaxID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="taxID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTaxIDsByTaxIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTaxIDsByTaxIDResult" type="tns:ArrayOfSalesTax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSalesTax">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SalesTax" nillable="true" type="tns:SalesTax" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SalesTax">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccruTaxAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccruTaxSubAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdjByTermsDisc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplTermDisc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplTermsDiscTax" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="APTaxPtDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARTaxPtDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatExcept05" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatFlg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Exemption" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExemTaxId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Exp_to_Proj_Sw" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpTaxAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpTaxSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilingLoc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GroupDetCnt" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupRule" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InclFrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InclInDocTot" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Inclmisc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LiabTaxAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LiabTaxSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Lvl2Exmpt" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewRateDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NewTaxRate" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OldTaxRate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="OPTaxPtDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POTaxPtDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrcTaxIncl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurTaxAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurTaxDiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurTaxDiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurTaxSub" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RateAboveMax" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsTaxAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsTaxDiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsTaxDiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsTaxSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAuthLvl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxBasis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCalcLvl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCalcMeth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCalcType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxRate" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxRvsdDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblAdjPct" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblMax" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblMin" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TxblMinMaxCuryID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VoucherTax" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getSalesTaxCatsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="catID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSalesTaxCatsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSalesTaxCatsByIDResult" type="tns:ArrayOfSlsTaxCat" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSlsTaxCat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SlsTaxCat" nillable="true" type="tns:SlsTaxCat" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SlsTaxCat">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CatId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getBillTypesByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code_value" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBillTypesByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getBillTypesByIDResult" type="tns:ArrayOfPJCODE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubAccountsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubAccountsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSubAccountsByIDResult" type="tns:ArrayOfSegDef" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSegDef">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SegDef" nillable="true" type="tns:SegDef" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SegDef">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Active" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldClass" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldClassName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getTRDAccountCategoriesByAcct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="acct" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTRDAccountCategoriesByAcctResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTRDAccountCategoriesByAcctResult" type="tns:ArrayOfPJACCT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPJACCT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PJACCT" nillable="true" type="tns:PJACCT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PJACCT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct_desc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct_group_cd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct_status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="acct_type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id05" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ca_id06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ca_id07" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ca_id08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ca_id09" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ca_id10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id16" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id17" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id18" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id19" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ca_id20" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="crtd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="crtd_user" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id1_sw" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id2_sw" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id3_sw" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id4_sw" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="id5_sw" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="lupd_datetime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="lupd_user" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="noteid" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="sort_num" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="aboutSoapIn">
+    <wsdl:part name="parameters" element="tns:about" />
+  </wsdl:message>
+  <wsdl:message name="aboutSoapOut">
+    <wsdl:part name="parameters" element="tns:aboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="editScreenSoapIn">
+    <wsdl:part name="parameters" element="tns:editScreen" />
+  </wsdl:message>
+  <wsdl:message name="editScreenSoapOut">
+    <wsdl:part name="parameters" element="tns:editScreenResponse" />
+  </wsdl:message>
+  <wsdl:message name="editScreenctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editPJINVHDRSoapIn">
+    <wsdl:part name="parameters" element="tns:editPJINVHDR" />
+  </wsdl:message>
+  <wsdl:message name="editPJINVHDRSoapOut">
+    <wsdl:part name="parameters" element="tns:editPJINVHDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="editPJINVHDRctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDetSoapIn">
+    <wsdl:part name="parameters" element="tns:editPJInvDet" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDetSoapOut">
+    <wsdl:part name="parameters" element="tns:editPJInvDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDet_TRDSoapIn">
+    <wsdl:part name="parameters" element="tns:editPJInvDet_TRD" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDet_TRDSoapOut">
+    <wsdl:part name="parameters" element="tns:editPJInvDet_TRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="editPJInvDet_TRDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewscreenSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewscreen" />
+  </wsdl:message>
+  <wsdl:message name="getNewscreenSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewscreenResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewscreenctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJINVHDRSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewPJINVHDR" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJINVHDRSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewPJINVHDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJINVHDRctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDetSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewPJInvDet" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDetSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewPJInvDetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDet_TRDSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewPJInvDet_TRD" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDet_TRDSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewPJInvDet_TRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewPJInvDet_TRDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByDraftNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:getScreenByDraftNumber" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByDraftNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:getScreenByDraftNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByDraftNumberctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJINVHDRByID" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJINVHDRByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJINVHDRByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJINVHDRByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJINVHDRByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDraftNumbersByProjectSoapIn">
+    <wsdl:part name="parameters" element="tns:getDraftNumbersByProject" />
+  </wsdl:message>
+  <wsdl:message name="getDraftNumbersByProjectSoapOut">
+    <wsdl:part name="parameters" element="tns:getDraftNumbersByProjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDraftNumbersByProjectctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJInvDetByID" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJInvDetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJInvDet_TRDByID" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJInvDet_TRDByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJInvDetByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJInvDetByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDetByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPJInvDet_TRDByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPJInvDet_TRDByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPJInvDet_TRDByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getProjectsByID" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getProjectsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getProjectsByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getProjectsByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProjectsByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getInvoiceTypesByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getInvoiceTypesByID" />
+  </wsdl:message>
+  <wsdl:message name="getInvoiceTypesByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getInvoiceTypesByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getInvoiceTypesByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getSalespersonsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getSalespersonsByID" />
+  </wsdl:message>
+  <wsdl:message name="getSalespersonsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getSalespersonsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSalespersonsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomersByID" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomersByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getRateTypesByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getRateTypesByID" />
+  </wsdl:message>
+  <wsdl:message name="getRateTypesByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getRateTypesByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRateTypesByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getTasksSoapIn">
+    <wsdl:part name="parameters" element="tns:getTasks" />
+  </wsdl:message>
+  <wsdl:message name="getTasksSoapOut">
+    <wsdl:part name="parameters" element="tns:getTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTasksctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getAccountCategoriesForProjectByAcctSoapIn">
+    <wsdl:part name="parameters" element="tns:getAccountCategoriesForProjectByAcct" />
+  </wsdl:message>
+  <wsdl:message name="getAccountCategoriesForProjectByAcctSoapOut">
+    <wsdl:part name="parameters" element="tns:getAccountCategoriesForProjectByAcctResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccountCategoriesForProjectByAcctctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeesByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getEmployeesByID" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeesByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getEmployeesByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEmployeesByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getVendorsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getVendorsByID" />
+  </wsdl:message>
+  <wsdl:message name="getVendorsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getVendorsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVendorsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getLaborClassesByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getLaborClassesByID" />
+  </wsdl:message>
+  <wsdl:message name="getLaborClassesByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getLaborClassesByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLaborClassesByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsByTaxIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getTaxIDsByTaxID" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsByTaxIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getTaxIDsByTaxIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsByTaxIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getSalesTaxCatsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getSalesTaxCatsByID" />
+  </wsdl:message>
+  <wsdl:message name="getSalesTaxCatsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getSalesTaxCatsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSalesTaxCatsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getBillTypesByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getBillTypesByID" />
+  </wsdl:message>
+  <wsdl:message name="getBillTypesByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getBillTypesByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBillTypesByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getSubAccountsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getSubAccountsByID" />
+  </wsdl:message>
+  <wsdl:message name="getSubAccountsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getSubAccountsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubAccountsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getTRDAccountCategoriesByAcctSoapIn">
+    <wsdl:part name="parameters" element="tns:getTRDAccountCategoriesByAcct" />
+  </wsdl:message>
+  <wsdl:message name="getTRDAccountCategoriesByAcctSoapOut">
+    <wsdl:part name="parameters" element="tns:getTRDAccountCategoriesByAcctResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTRDAccountCategoriesByAcctctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapIn">
+    <wsdl:part name="parameters" element="tns:ping" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapOut">
+    <wsdl:part name="parameters" element="tns:pingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="projectInvoiceAndAdjustmentMaintenanceSoap">
+    <wsdl:operation name="about">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">About  Copyright 2015. Catalina Technology.</wsdl:documentation>
+      <wsdl:input message="tns:aboutSoapIn" />
+      <wsdl:output message="tns:aboutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editScreen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Edits all the records for the project invoice and adjustment maintenance screen</wsdl:documentation>
+      <wsdl:input message="tns:editScreenSoapIn" />
+      <wsdl:output message="tns:editScreenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editPJINVHDR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit PJINVHDR entries.  Calls: xct_spDSLEditPJINVHDR</wsdl:documentation>
+      <wsdl:input message="tns:editPJINVHDRSoapIn" />
+      <wsdl:output message="tns:editPJINVHDRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit PJInvDet entries.  Calls: xct_spDSLEditPJInvDet</wsdl:documentation>
+      <wsdl:input message="tns:editPJInvDetSoapIn" />
+      <wsdl:output message="tns:editPJInvDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet_TRD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit PJInvDet entries.  Calls: xct_spDSLEditPJInvDet</wsdl:documentation>
+      <wsdl:input message="tns:editPJInvDet_TRDSoapIn" />
+      <wsdl:output message="tns:editPJInvDet_TRDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewscreen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets a new default screen based on the passed template</wsdl:documentation>
+      <wsdl:input message="tns:getNewscreenSoapIn" />
+      <wsdl:output message="tns:getNewscreenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJINVHDR">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank PJINVHDR object</wsdl:documentation>
+      <wsdl:input message="tns:getNewPJINVHDRSoapIn" />
+      <wsdl:output message="tns:getNewPJINVHDRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank PJInvDet object</wsdl:documentation>
+      <wsdl:input message="tns:getNewPJInvDetSoapIn" />
+      <wsdl:output message="tns:getNewPJInvDetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet_TRD">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank PJInvDet object</wsdl:documentation>
+      <wsdl:input message="tns:getNewPJInvDet_TRDSoapIn" />
+      <wsdl:output message="tns:getNewPJInvDet_TRDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByDraftNumber">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a Screen object using the passed draft_num</wsdl:documentation>
+      <wsdl:input message="tns:getScreenByDraftNumberSoapIn" />
+      <wsdl:output message="tns:getScreenByDraftNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for all PJINVHDR entries by draft_num</wsdl:documentation>
+      <wsdl:input message="tns:getPJINVHDRByIDSoapIn" />
+      <wsdl:output message="tns:getPJINVHDRByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for a single PJINVHDR entry by ID</wsdl:documentation>
+      <wsdl:input message="tns:getPJINVHDRByExactIDSoapIn" />
+      <wsdl:output message="tns:getPJINVHDRByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDraftNumbersByProject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for all PJINVHDR entries by project</wsdl:documentation>
+      <wsdl:input message="tns:getDraftNumbersByProjectSoapIn" />
+      <wsdl:output message="tns:getDraftNumbersByProjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for all PJInvDet entries by draft num</wsdl:documentation>
+      <wsdl:input message="tns:getPJInvDetByIDSoapIn" />
+      <wsdl:output message="tns:getPJInvDetByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for all PJInvDet_TRD entries by draft num</wsdl:documentation>
+      <wsdl:input message="tns:getPJInvDet_TRDByIDSoapIn" />
+      <wsdl:output message="tns:getPJInvDet_TRDByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for a single PJInvDet entry by ID</wsdl:documentation>
+      <wsdl:input message="tns:getPJInvDetByExactIDSoapIn" />
+      <wsdl:output message="tns:getPJInvDetByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for a single PJInvDet_TRD entry by ID</wsdl:documentation>
+      <wsdl:input message="tns:getPJInvDet_TRDByExactIDSoapIn" />
+      <wsdl:output message="tns:getPJInvDet_TRDByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for billable active projects by ID</wsdl:documentation>
+      <wsdl:input message="tns:getProjectsByIDSoapIn" />
+      <wsdl:output message="tns:getProjectsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a single billable active project by ID</wsdl:documentation>
+      <wsdl:input message="tns:getProjectsByExactIDSoapIn" />
+      <wsdl:output message="tns:getProjectsByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceTypesByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for PJCODE invoice types by ID</wsdl:documentation>
+      <wsdl:input message="tns:getInvoiceTypesByIDSoapIn" />
+      <wsdl:output message="tns:getInvoiceTypesByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalespersonsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for salespersons based on slsPerID</wsdl:documentation>
+      <wsdl:input message="tns:getSalespersonsByIDSoapIn" />
+      <wsdl:output message="tns:getSalespersonsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for customers by custID</wsdl:documentation>
+      <wsdl:input message="tns:getCustomersByIDSoapIn" />
+      <wsdl:output message="tns:getCustomersByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRateTypesByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for PJCODE rate types by ID</wsdl:documentation>
+      <wsdl:input message="tns:getRateTypesByIDSoapIn" />
+      <wsdl:output message="tns:getRateTypesByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTasks">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for tasks</wsdl:documentation>
+      <wsdl:input message="tns:getTasksSoapIn" />
+      <wsdl:output message="tns:getTasksSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccountCategoriesForProjectByAcct">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for account categories for project by acct</wsdl:documentation>
+      <wsdl:input message="tns:getAccountCategoriesForProjectByAcctSoapIn" />
+      <wsdl:output message="tns:getAccountCategoriesForProjectByAcctSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeesByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for pjemploy entries based on employee</wsdl:documentation>
+      <wsdl:input message="tns:getEmployeesByIDSoapIn" />
+      <wsdl:output message="tns:getEmployeesByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for Vendors by ID</wsdl:documentation>
+      <wsdl:input message="tns:getVendorsByIDSoapIn" />
+      <wsdl:output message="tns:getVendorsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLaborClassesByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for labor classes by id</wsdl:documentation>
+      <wsdl:input message="tns:getLaborClassesByIDSoapIn" />
+      <wsdl:output message="tns:getLaborClassesByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for taxIDs by id</wsdl:documentation>
+      <wsdl:input name="getTaxIDsByTaxID" message="tns:getTaxIDsByTaxIDSoapIn" />
+      <wsdl:output name="getTaxIDsByTaxID" message="tns:getTaxIDsByTaxIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSalesTaxCatsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for Sales Tax Categories by ID</wsdl:documentation>
+      <wsdl:input message="tns:getSalesTaxCatsByIDSoapIn" />
+      <wsdl:output message="tns:getSalesTaxCatsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBillTypesByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for PJCODE bill types by ID</wsdl:documentation>
+      <wsdl:input message="tns:getBillTypesByIDSoapIn" />
+      <wsdl:output message="tns:getBillTypesByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccountsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for GL subaccounts based on ID</wsdl:documentation>
+      <wsdl:input message="tns:getSubAccountsByIDSoapIn" />
+      <wsdl:output message="tns:getSubAccountsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTRDAccountCategoriesByAcct">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for TRD account categories by acct</wsdl:documentation>
+      <wsdl:input message="tns:getTRDAccountCategoriesByAcctSoapIn" />
+      <wsdl:output message="tns:getTRDAccountCategoriesByAcctSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ping service. Types: WEBSERVICE, SQL, ALL</wsdl:documentation>
+      <wsdl:input message="tns:pingSoapIn" />
+      <wsdl:output message="tns:pingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="projectInvoiceAndAdjustmentMaintenanceSoap" type="tns:projectInvoiceAndAdjustmentMaintenanceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editScreen">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editScreen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editScreenctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJINVHDR">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJINVHDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editPJINVHDRctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJInvDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editPJInvDetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet_TRD">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJInvDet_TRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editPJInvDet_TRDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewscreen">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewscreen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewscreenctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJINVHDR">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJINVHDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewPJINVHDRctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJInvDet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewPJInvDetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet_TRD">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJInvDet_TRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewPJInvDet_TRDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByDraftNumber">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getScreenByDraftNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getScreenByDraftNumberctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJINVHDRByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJINVHDRByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJINVHDRByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJINVHDRByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDraftNumbersByProject">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDraftNumbersByProject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDraftNumbersByProjectctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJInvDetByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDet_TRDByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJInvDet_TRDByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDetByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJInvDetByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDet_TRDByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPJInvDet_TRDByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getProjectsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProjectsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getProjectsByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getProjectsByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceTypesByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getInvoiceTypesByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getInvoiceTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalespersonsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSalespersonsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSalespersonsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getCustomersByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomersByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRateTypesByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getRateTypesByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getRateTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTasks">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getTasksctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountCategoriesForProjectByAcct">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getAccountCategoriesForProjectByAcct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getAccountCategoriesForProjectByAcctctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeesByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getEmployeesByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getEmployeesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getVendorsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getVendorsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLaborClassesByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getLaborClassesByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getLaborClassesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTaxIDsByTaxID" style="document" />
+      <wsdl:input name="getTaxIDsByTaxID">
+        <soap:body use="literal" />
+        <soap:header message="tns:getTaxIDsByTaxIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTaxIDsByTaxID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesTaxCatsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSalesTaxCatsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSalesTaxCatsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBillTypesByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getBillTypesByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getBillTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccountsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSubAccountsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSubAccountsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTRDAccountCategoriesByAcct">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTRDAccountCategoriesByAcct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getTRDAccountCategoriesByAcctctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="projectInvoiceAndAdjustmentMaintenanceSoap12" type="tns:projectInvoiceAndAdjustmentMaintenanceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editScreen">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editScreen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editScreenctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJINVHDR">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJINVHDR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editPJINVHDRctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJInvDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editPJInvDetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editPJInvDet_TRD">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editPJInvDet_TRD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editPJInvDet_TRDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewscreen">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewscreen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewscreenctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJINVHDR">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJINVHDR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewPJINVHDRctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJInvDet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewPJInvDetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewPJInvDet_TRD">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewPJInvDet_TRD" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewPJInvDet_TRDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByDraftNumber">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getScreenByDraftNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getScreenByDraftNumberctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJINVHDRByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJINVHDRByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJINVHDRByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJINVHDRByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJINVHDRByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDraftNumbersByProject">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDraftNumbersByProject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDraftNumbersByProjectctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDetByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJInvDetByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDet_TRDByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJInvDet_TRDByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDetByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDetByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJInvDetByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPJInvDet_TRDByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPJInvDet_TRDByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPJInvDet_TRDByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getProjectsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProjectsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProjectsByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getProjectsByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getProjectsByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getInvoiceTypesByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getInvoiceTypesByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getInvoiceTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalespersonsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSalespersonsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSalespersonsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getCustomersByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomersByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRateTypesByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getRateTypesByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getRateTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTasks">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTasks" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTasksctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountCategoriesForProjectByAcct">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getAccountCategoriesForProjectByAcct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getAccountCategoriesForProjectByAcctctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEmployeesByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getEmployeesByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getEmployeesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVendorsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getVendorsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getVendorsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLaborClassesByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getLaborClassesByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getLaborClassesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTaxIDsByTaxID" style="document" />
+      <wsdl:input name="getTaxIDsByTaxID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTaxIDsByTaxIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getTaxIDsByTaxID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSalesTaxCatsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSalesTaxCatsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSalesTaxCatsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBillTypesByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getBillTypesByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getBillTypesByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccountsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getSubAccountsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSubAccountsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTRDAccountCategoriesByAcct">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getTRDAccountCategoriesByAcct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTRDAccountCategoriesByAcctctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="projectInvoiceAndAdjustmentMaintenance">
+    <wsdl:port name="projectInvoiceAndAdjustmentMaintenanceSoap" binding="tns:projectInvoiceAndAdjustmentMaintenanceSoap">
+      <soap:address location="http://localhost/ctDynamicsSL/projectInvoiceAndAdjustmentMaintenance.asmx" />
+    </wsdl:port>
+    <wsdl:port name="projectInvoiceAndAdjustmentMaintenanceSoap12" binding="tns:projectInvoiceAndAdjustmentMaintenanceSoap12">
+      <soap12:address location="http://localhost/ctDynamicsSL/projectInvoiceAndAdjustmentMaintenance.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

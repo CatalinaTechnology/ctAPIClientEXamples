@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/ctDynamicsSL/serviceEmployeeMaintenance.asmx?wsdl" docRef="http://localhost/ctDynamicsSL/serviceEmployeeMaintenance.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/ctDynamicsSL/serviceEmployeeMaintenance.asmx" xmlns:q1="http://www.catalinatechnology.com/services/ctDynamicsSL" binding="q1:serviceEmployeeMaintenanceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/ctDynamicsSL/serviceEmployeeMaintenance.asmx" xmlns:q2="http://www.catalinatechnology.com/services/ctDynamicsSL" binding="q2:serviceEmployeeMaintenanceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

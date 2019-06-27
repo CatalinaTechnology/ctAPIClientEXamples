@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.orderManagement.input.shippers.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_orderManagement_input_shippers_ctDynamicsSL_orderManagement_input_shippers_shippers" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/shippers.asmx</Value>
+    </Setting>
+    <Setting Name="client_orderManagement_input_shippers_ctDynamicsSL_orders_orders" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/orders.asmx</Value>
+    </Setting>
+    <Setting Name="client_orderManagement_input_shippers_ctDynamicsSL_customers_customers" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/customers.asmx</Value>
+    </Setting>
+    <Setting Name="client_orderManagement_input_shippers_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

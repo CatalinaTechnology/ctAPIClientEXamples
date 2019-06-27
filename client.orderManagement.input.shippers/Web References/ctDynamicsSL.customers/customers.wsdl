@@ -1,0 +1,2149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.catalinaTechnology.com/services/ctDynamicsSL" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.catalinaTechnology.com/services/ctDynamicsSL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.catalinaTechnology.com/services/ctDynamicsSL">
+      <s:element name="about">
+        <s:complexType />
+      </s:element>
+      <s:element name="aboutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aboutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inCust" type="tns:customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="customer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="businessRuleViolations" type="tns:ArrayOfBusinessRuleViolation" />
+          <s:element minOccurs="0" maxOccurs="1" name="custContacts">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="myCustomerEDI" type="tns:customerEDI" />
+          <s:element minOccurs="0" maxOccurs="1" name="addresses" type="tns:ArrayOfAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorString" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrRevAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccrRevSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AcctNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplFinChrg" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoApply" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillAttn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillSalut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillState" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillThruProject" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BillZip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardHldrName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConsolInv" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrLmt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryPrcLvlRtTp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustFillPriority" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltShipToId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DocPublishingFlag" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DunMsg" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvtSubst" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OneDraft" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PmtMethod" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrcLvlID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrtMCStmt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrePayAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrePaySub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceClassID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrtStmt" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salut" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipCmplt" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipPctAct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipPctMax" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="SICCode1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SICCode2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SingleInvoice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsPerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StmtCycleID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StmtType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxDflt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxExemptNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxLocID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRegNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Territory" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TradeDisc" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardExpDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="SetupDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyerReqd" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditMgrID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditRule" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustItemReqd" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltBuyerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDINotes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GEOCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLClassID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GracePer" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinOrder" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinWt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OMSlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OMSlsSub" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POReqd" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubstOK" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBusinessRuleViolation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="businessRuleViolation" nillable="true" type="tns:businessRuleViolation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="businessRuleViolation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fatal" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="messageNbr" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="raised" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="severity" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="customerEDI">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AgreeNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApptNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatchNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BidNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOLFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOLNoteID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOLRptFormat" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BuyerReqd" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="CertID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CheckShipToID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSSub" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContractNbrFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContTrackLevel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditMgrID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditRule" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CrossDockFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustCommClassID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustItemReqd" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeliveryDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DeptFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DfltBuyerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscSub" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DivFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser10Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser1Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser2Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser3Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser4Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser5Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser6Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser7Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser8Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDSOUser9Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EquipNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FOBFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FOBID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FOBLocQualFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FOBTranTypeFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtAllowCd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtDiscCd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLClassID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GracePer" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="GSA" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeightFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImpConvMeth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InternalNoteID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IntVendorNbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IntVendorNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="InvcNoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LabelReqd" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LenFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineItemEDIDiscCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MajorAccount" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ManNoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinOrder" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinWt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MultiDestMeth" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NbrCartonsFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrigSourceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OutBndTemplate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlanDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="POReqd" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PROFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PSNoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTNoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="QuoteNbrFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegionID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestDateFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalespersonFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SalesRegionFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SCACFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScheduledDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SDQMarkForFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendZeroInvc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SepDestOrd" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipDateFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipmentLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipMthPayFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipNBDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipNLDateFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipToRefNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipViaFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShipWeekOfFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SingleContainer" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOTypeID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser10Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser1Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser2Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser3Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser4Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser5Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser6Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser7Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser8Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOUser9Flg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SplitPartialLineDisc" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SubstOK" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerritoryID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrackingNbrFlg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UseEDIPrice" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User5" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User6" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User8" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserNoteID1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserNoteID2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserNoteID3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VolumeFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebSite" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WeightFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WholeOrdEDIDiscCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WidthFlg" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User10" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User9" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="address" nillable="true" type="tns:address" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="address">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EDIShipToRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FOB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrghtCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrtTermsID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeoCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MapLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiscSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="OMSlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OMSlsSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RegionID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipViaID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsAcct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsPerID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SlsSub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxId03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxLocID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRegNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Territory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipToID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="saveCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="saveCustomerResult" type="tns:customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ctDynamicsSLHeader" type="tns:ctDynamicsSLHeader" />
+      <s:complexType name="ctDynamicsSLHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpnyID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="saveNewCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inCust" type="tns:customer" />
+            <s:element minOccurs="1" maxOccurs="1" name="raiseBusinessRuleViolations" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveNewCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="saveNewCustomerResult" type="tns:customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerResult" type="tns:customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCustomerCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardHolderName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cardExpDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateCustomerCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="updateCustomerCardResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="quickCustomerCopy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="origCustID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldListing" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="custName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billToAddr" type="tns:address" />
+            <s:element minOccurs="0" maxOccurs="1" name="mainAddr" type="tns:address" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="quickCustomerCopyResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCustomerValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerEDIValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerEDIValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerEDIValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustContactValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contactID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fieldName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustContactValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustContactValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createCustomerContactsDataset">
+        <s:complexType />
+      </s:element>
+      <s:element name="createCustomerContactsDatasetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="createCustomerContactsDatasetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCurrencies">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCurrenciesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCurrenciesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTaxIDsAsString">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTaxIDsAsStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTaxIDsAsStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getStatusDescrs">
+        <s:complexType />
+      </s:element>
+      <s:element name="getStatusDescrsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getStatusDescrsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustClasses">
+        <s:complexType />
+      </s:element>
+      <s:element name="getCustClassesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustClassesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPriceClasses">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPriceClassesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPriceClassesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getSubAccts">
+        <s:complexType />
+      </s:element>
+      <s:element name="getSubAcctsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getSubAcctsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTerms">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTermsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTermsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerContactsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerDefaultPO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerDefaultPOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerDefaultPOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currentPageNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pageSize" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customersParams" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customersSortBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getArAccounts">
+        <s:complexType />
+      </s:element>
+      <s:element name="getArAccountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getArAccountsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveCustomerAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tmpAddress" type="tns:address" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="saveCustomerAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="saveCustomerAddressResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipToID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerAddressResult" type="tns:address" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddressAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipToID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddressAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerAddressAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddresses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="custID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustomerAddressesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustomerAddressesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewCustomerObject">
+        <s:complexType />
+      </s:element>
+      <s:element name="getNewCustomerObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewCustomerObjectResult" type="tns:customer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editCustContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:CustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CustContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Addr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderLimit" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POReqdAmt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Salut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User10" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User4" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User5" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User6" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User7" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User8" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User9" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebSite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zip" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="editCustContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editCustContactResult" type="tns:CustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editCustContactAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:CustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editCustContactAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editCustContactAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewCustContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:CustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewCustContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewCustContactResult" type="tns:CustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustContacts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNameValuePairs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="nameValuePairs" nillable="true" type="tns:nameValuePairs" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="nameValuePairs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCustContactsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustContactsResult" type="tns:ArrayOfCustContact" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustContact" nillable="true" type="tns:CustContact" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getCustContactsAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getCustContactsAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getCustContactsAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="aboutSoapIn">
+    <wsdl:part name="parameters" element="tns:about" />
+  </wsdl:message>
+  <wsdl:message name="aboutSoapOut">
+    <wsdl:part name="parameters" element="tns:aboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:saveCustomer" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:saveCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="saveNewCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:saveNewCustomer" />
+  </wsdl:message>
+  <wsdl:message name="saveNewCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:saveNewCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveNewCustomerctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomer" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="updateCustomerCardSoapIn">
+    <wsdl:part name="parameters" element="tns:updateCustomerCard" />
+  </wsdl:message>
+  <wsdl:message name="updateCustomerCardSoapOut">
+    <wsdl:part name="parameters" element="tns:updateCustomerCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateCustomerCardctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="quickCustomerCopySoapIn">
+    <wsdl:part name="parameters" element="tns:quickCustomerCopy" />
+  </wsdl:message>
+  <wsdl:message name="quickCustomerCopySoapOut">
+    <wsdl:part name="parameters" element="tns:quickCustomerCopyResponse" />
+  </wsdl:message>
+  <wsdl:message name="quickCustomerCopyctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerValueSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerValue" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerValueSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerValuectDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerEDIValueSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerEDIValue" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerEDIValueSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerEDIValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerEDIValuectDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactValueSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustContactValue" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactValueSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustContactValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactValuectDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="createCustomerContactsDatasetSoapIn">
+    <wsdl:part name="parameters" element="tns:createCustomerContactsDataset" />
+  </wsdl:message>
+  <wsdl:message name="createCustomerContactsDatasetSoapOut">
+    <wsdl:part name="parameters" element="tns:createCustomerContactsDatasetResponse" />
+  </wsdl:message>
+  <wsdl:message name="createCustomerContactsDatasetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCurrenciesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCurrencies" />
+  </wsdl:message>
+  <wsdl:message name="getCurrenciesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCurrenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCurrenciesctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsAsStringSoapIn">
+    <wsdl:part name="parameters" element="tns:getTaxIDsAsString" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsAsStringSoapOut">
+    <wsdl:part name="parameters" element="tns:getTaxIDsAsStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTaxIDsAsStringctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getStatusDescrsSoapIn">
+    <wsdl:part name="parameters" element="tns:getStatusDescrs" />
+  </wsdl:message>
+  <wsdl:message name="getStatusDescrsSoapOut">
+    <wsdl:part name="parameters" element="tns:getStatusDescrsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getStatusDescrsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustClassesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustClasses" />
+  </wsdl:message>
+  <wsdl:message name="getCustClassesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustClassesctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPriceClassesSoapIn">
+    <wsdl:part name="parameters" element="tns:getPriceClasses" />
+  </wsdl:message>
+  <wsdl:message name="getPriceClassesSoapOut">
+    <wsdl:part name="parameters" element="tns:getPriceClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPriceClassesctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getSubAcctsSoapIn">
+    <wsdl:part name="parameters" element="tns:getSubAccts" />
+  </wsdl:message>
+  <wsdl:message name="getSubAcctsSoapOut">
+    <wsdl:part name="parameters" element="tns:getSubAcctsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSubAcctsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getTermsSoapIn">
+    <wsdl:part name="parameters" element="tns:getTerms" />
+  </wsdl:message>
+  <wsdl:message name="getTermsSoapOut">
+    <wsdl:part name="parameters" element="tns:getTermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTermsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerContacts" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerContactsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDefaultPOSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerDefaultPO" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDefaultPOSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerDefaultPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerDefaultPOctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomers" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomersResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomersctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getArAccountsSoapIn">
+    <wsdl:part name="parameters" element="tns:getArAccounts" />
+  </wsdl:message>
+  <wsdl:message name="getArAccountsSoapOut">
+    <wsdl:part name="parameters" element="tns:getArAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getArAccountsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:saveCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:saveCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="saveCustomerAddressctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerAddress" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerAddressAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerAddressAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressesSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustomerAddresses" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressesSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustomerAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustomerAddressesctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustomerObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewCustomerObject" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustomerObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewCustomerObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustomerObjectctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactSoapIn">
+    <wsdl:part name="parameters" element="tns:editCustContact" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactSoapOut">
+    <wsdl:part name="parameters" element="tns:editCustContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:editCustContactAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:editCustContactAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="editCustContactAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustContactSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewCustContact" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustContactSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewCustContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewCustContactctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustContacts" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustContactsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getCustContactsAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getCustContactsAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCustContactsAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapIn">
+    <wsdl:part name="parameters" element="tns:ping" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapOut">
+    <wsdl:part name="parameters" element="tns:pingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="customersSoap">
+    <wsdl:operation name="about">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">About  Copyright 2014. Catalina Technology.</wsdl:documentation>
+      <wsdl:input message="tns:aboutSoapIn" />
+      <wsdl:output message="tns:aboutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save an existing Customer.  This should be used when saving an existing customer.</wsdl:documentation>
+      <wsdl:input message="tns:saveCustomerSoapIn" />
+      <wsdl:output message="tns:saveCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveNewCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Save a new customer.  This should be used when creating a new customer</wsdl:documentation>
+      <wsdl:input message="tns:saveNewCustomerSoapIn" />
+      <wsdl:output message="tns:saveNewCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the customer record for the passed custID.</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerSoapIn" />
+      <wsdl:output message="tns:getCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerCard">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update customer credit card.  This will save the credit card information back into the customer record for future use.</wsdl:documentation>
+      <wsdl:input message="tns:updateCustomerCardSoapIn" />
+      <wsdl:output message="tns:updateCustomerCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="quickCustomerCopy">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Do a quick customer copy from an existing custID.</wsdl:documentation>
+      <wsdl:input message="tns:quickCustomerCopySoapIn" />
+      <wsdl:output message="tns:quickCustomerCopySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the field specified from the customer table</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerValueSoapIn" />
+      <wsdl:output message="tns:getCustomerValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerEDIValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the field specified from the customerEDI table</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerEDIValueSoapIn" />
+      <wsdl:output message="tns:getCustomerEDIValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactValue">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the field specified from the custContact table</wsdl:documentation>
+      <wsdl:input message="tns:getCustContactValueSoapIn" />
+      <wsdl:output message="tns:getCustContactValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createCustomerContactsDataset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">calls:xct_spDSLCreateEmptyCustomerContactDataset; This creates a blank customer contact dataset.  This is very usefull when adding a new customer contact.  First, create a blank contact dataset by calling this function.  Then add rows to the dataset to be passed to the add contacts function.</wsdl:documentation>
+      <wsdl:input message="tns:createCustomerContactsDatasetSoapIn" />
+      <wsdl:output message="tns:createCustomerContactsDatasetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencies">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">calls: xct_spDSLGetCurrencies</wsdl:documentation>
+      <wsdl:input message="tns:getCurrenciesSoapIn" />
+      <wsdl:output message="tns:getCurrenciesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsAsString">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">brings back all taxID's in a comma delimited String. calls:xct_spDSLGetSalesTaxIDs</wsdl:documentation>
+      <wsdl:input message="tns:getTaxIDsAsStringSoapIn" />
+      <wsdl:output message="tns:getTaxIDsAsStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getStatusDescrs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get descriptions for all the customer statuses. calls: xct_spDSLGetStatusDescriptions</wsdl:documentation>
+      <wsdl:input message="tns:getStatusDescrsSoapIn" />
+      <wsdl:output message="tns:getStatusDescrsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustClasses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetCustClasses</wsdl:documentation>
+      <wsdl:input message="tns:getCustClassesSoapIn" />
+      <wsdl:output message="tns:getCustClassesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPriceClasses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetPriceClasses</wsdl:documentation>
+      <wsdl:input message="tns:getPriceClassesSoapIn" />
+      <wsdl:output message="tns:getPriceClassesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetSubAccts</wsdl:documentation>
+      <wsdl:input message="tns:getSubAcctsSoapIn" />
+      <wsdl:output message="tns:getSubAcctsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTerms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetTerms</wsdl:documentation>
+      <wsdl:input message="tns:getTermsSoapIn" />
+      <wsdl:output message="tns:getTermsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetCustomerContacts</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerContactsSoapIn" />
+      <wsdl:output message="tns:getCustomerContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDefaultPO">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetCustomerDefaultPO</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerDefaultPOSoapIn" />
+      <wsdl:output message="tns:getCustomerDefaultPOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches customers. Calls:xct_spDSLGetCustomers</wsdl:documentation>
+      <wsdl:input message="tns:getCustomersSoapIn" />
+      <wsdl:output message="tns:getCustomersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getArAccounts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves all AR Accounts.  Calls: xct_spDSLGetArAccounts</wsdl:documentation>
+      <wsdl:input message="tns:getArAccountsSoapIn" />
+      <wsdl:output message="tns:getArAccountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomerAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Saves a customer address to soAddress.  Calls: xct_spDSLSaveCustomerAddress</wsdl:documentation>
+      <wsdl:input message="tns:saveCustomerAddressSoapIn" />
+      <wsdl:output message="tns:saveCustomerAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddress">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an address Calls: xct_spDSLGetCustomerAddress</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerAddressSoapIn" />
+      <wsdl:output message="tns:getCustomerAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddressAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns an address Calls: xct_spDSLGetCustomerAddress</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerAddressAsDataSetSoapIn" />
+      <wsdl:output message="tns:getCustomerAddressAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddresses">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns all addresses tie to a customer in soAddress.  Calls: xct_spDSLGetCustomerAddresses</wsdl:documentation>
+      <wsdl:input message="tns:getCustomerAddressesSoapIn" />
+      <wsdl:output message="tns:getCustomerAddressesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustomerObject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets a new customer object with default values </wsdl:documentation>
+      <wsdl:input message="tns:getNewCustomerObjectSoapIn" />
+      <wsdl:output message="tns:getNewCustomerObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editCustContact">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit CustContact entries.  Calls: xct_spDSLEditCustContact </wsdl:documentation>
+      <wsdl:input message="tns:editCustContactSoapIn" />
+      <wsdl:output message="tns:editCustContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editCustContactAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit CustContact entries.  Calls: xct_spDSLEditCustContact </wsdl:documentation>
+      <wsdl:input message="tns:editCustContactAsDataSetSoapIn" />
+      <wsdl:output message="tns:editCustContactAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustContact">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank CustContact object</wsdl:documentation>
+      <wsdl:input message="tns:getNewCustContactSoapIn" />
+      <wsdl:output message="tns:getNewCustContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustContacts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetCustContacts</wsdl:documentation>
+      <wsdl:input message="tns:getCustContactsSoapIn" />
+      <wsdl:output message="tns:getCustContactsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactsAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetCustContacts</wsdl:documentation>
+      <wsdl:input message="tns:getCustContactsAsDataSetSoapIn" />
+      <wsdl:output message="tns:getCustContactsAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ping service. Types: WEBSERVICE, SQL, ALL</wsdl:documentation>
+      <wsdl:input message="tns:pingSoapIn" />
+      <wsdl:output message="tns:pingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="customersSoap" type="tns:customersSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomer">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:saveCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveNewCustomer">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveNewCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:saveNewCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerCard">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/updateCustomerCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:updateCustomerCardctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="quickCustomerCopy">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/quickCustomerCopy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:quickCustomerCopyctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerValue">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerEDIValue">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerEDIValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerEDIValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactValue">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContactValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustContactValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCustomerContactsDataset">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/createCustomerContactsDataset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:createCustomerContactsDatasetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencies">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCurrencies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCurrenciesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsAsString">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getTaxIDsAsString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getTaxIDsAsStringctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusDescrs">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getStatusDescrs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getStatusDescrsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustClasses">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustClassesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceClasses">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getPriceClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPriceClassesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccts">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getSubAccts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getSubAcctsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTerms">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getTerms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getTermsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerContacts">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerContactsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDefaultPO">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerDefaultPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerDefaultPOctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomersctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getArAccounts">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getArAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getArAccountsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomerAddress">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:saveCustomerAddressctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddress">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerAddressctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddressAsDataSet">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddressAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerAddressAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddresses">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustomerAddressesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustomerObject">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getNewCustomerObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewCustomerObjectctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCustContact">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/editCustContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editCustContactctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCustContactAsDataSet">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/editCustContactAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editCustContactAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustContact">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getNewCustContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewCustContactctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContacts">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContacts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustContactsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactsAsDataSet">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContactsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getCustContactsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="customersSoap12" type="tns:customersSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomer">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:saveCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveNewCustomer">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveNewCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:saveNewCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomerCard">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/updateCustomerCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:updateCustomerCardctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="quickCustomerCopy">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/quickCustomerCopy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:quickCustomerCopyctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerValue">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerEDIValue">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerEDIValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerEDIValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactValue">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContactValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustContactValuectDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCustomerContactsDataset">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/createCustomerContactsDataset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:createCustomerContactsDatasetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencies">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCurrencies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCurrenciesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTaxIDsAsString">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getTaxIDsAsString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTaxIDsAsStringctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStatusDescrs">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getStatusDescrs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getStatusDescrsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustClasses">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustClassesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceClasses">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getPriceClasses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPriceClassesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubAccts">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getSubAccts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getSubAcctsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTerms">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getTerms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getTermsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerContacts">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerContactsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerDefaultPO">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerDefaultPO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerDefaultPOctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomersctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getArAccounts">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getArAccounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getArAccountsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveCustomerAddress">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/saveCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:saveCustomerAddressctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddress">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerAddressctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddressAsDataSet">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddressAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerAddressAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomerAddresses">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustomerAddresses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustomerAddressesctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustomerObject">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getNewCustomerObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewCustomerObjectctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCustContact">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/editCustContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editCustContactctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editCustContactAsDataSet">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/editCustContactAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editCustContactAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewCustContact">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getNewCustContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewCustContactctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContacts">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContacts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustContactsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCustContactsAsDataSet">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/getCustContactsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getCustContactsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap12:operation soapAction="http://www.catalinaTechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="customers">
+    <wsdl:port name="customersSoap" binding="tns:customersSoap">
+      <soap:address location="http://localhost/ctapi/services/ctDynamicsSL/customers.asmx" />
+    </wsdl:port>
+    <wsdl:port name="customersSoap12" binding="tns:customersSoap12">
+      <soap12:address location="http://localhost/ctapi/services/ctDynamicsSL/customers.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

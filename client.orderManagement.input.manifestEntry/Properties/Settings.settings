@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.orderManagement.input.manifestEntry.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_orderManagement_input_manifestEntry_ctDynamicsSL_orderManagement_input_manifestEntry_manifestEntry" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/manifestEntry.asmx</Value>
+    </Setting>
+    <Setting Name="client_orderManagement_input_manifestEntry_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

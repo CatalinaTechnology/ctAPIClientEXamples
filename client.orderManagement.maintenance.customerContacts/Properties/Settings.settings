@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.orderManagement.maintenance.customerContacts.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_orderManagement_maintenance_customerContacts_ctDynamicsSL_orderManagement_maintenance_customerContacts_customerContacts" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/customerContacts.asmx</Value>
+    </Setting>
+    <Setting Name="client_orderManagement_maintenance_customerContacts_ctDynamicsSL_financial_accountsReceivable_maintenance_customerMaintenance_customerMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/customerMaintenance.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

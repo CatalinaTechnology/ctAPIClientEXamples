@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL">
+      <s:element name="about">
+        <s:complexType />
+      </s:element>
+      <s:element name="aboutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aboutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDSLXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSLXML">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="xmlGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="createdDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="lastUpdated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="xmlContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user8" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user9" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="user10" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="user11" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="editDSLXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editDSLXMLResult" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ctDynamicsSLHeader" type="tns:ctDynamicsSLHeader" />
+      <s:complexType name="ctDynamicsSLHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpnyID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="editDSLXMLAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDSLXMLAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editDSLXMLAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewDSLXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewDSLXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewDSLXMLResult" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfNameValuePairs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="nameValuePairs" nillable="true" type="tns:nameValuePairs" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="nameValuePairs">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDSLXMLsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLsResult" type="tns:ArrayOfDSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDSLXML">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSLXML" nillable="true" type="tns:DSLXML" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDSLXMLsAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLsAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLsAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLsByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLsByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLsByIDResult" type="tns:ArrayOfDSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGUID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLByExactIDResult" type="tns:DSLXML" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDSLXMLLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DSLXMLLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="logGUID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="logDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="logNote" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="xmlGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="itemType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="createdDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="lastUpdated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="xmlContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user8" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user9" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="user10" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="user11" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="editDSLXMLLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editDSLXMLLogResult" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDSLXMLLogAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="actionType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inItem" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="editDSLXMLLogAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="editDSLXMLLogAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewDSLXMLLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inTemplate" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getNewDSLXMLLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getNewDSLXMLLogResult" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLLogs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLLogsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLLogsResult" type="tns:ArrayOfDSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDSLXMLLog">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DSLXMLLog" nillable="true" type="tns:DSLXMLLog" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDSLXMLLogsAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLLogsAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLLogsAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLStatistics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLStatisticsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLStatisticsResult" type="tns:ArrayOfGenericResultPair" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGenericResultPair">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="genericResultPair" nillable="true" type="tns:genericResultPair" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="genericResultPair">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="sortIndex" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="user1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="user4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="user5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="user6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="user7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user8" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="user9" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="user10" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="user11" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getDSLXMLStatisticsAsDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNumber" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="parms" type="tns:ArrayOfNameValuePairs" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getDSLXMLStatisticsAsDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getDSLXMLStatisticsAsDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="copyDSLXMLToLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="logNote" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="deleteSource" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="copyDSLXMLToLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="copyDSLXMLToLogResult" type="tns:DSLXMLLog" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="aboutSoapIn">
+    <wsdl:part name="parameters" element="tns:about" />
+  </wsdl:message>
+  <wsdl:message name="aboutSoapOut">
+    <wsdl:part name="parameters" element="tns:aboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:editDSLXML" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:editDSLXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:editDSLXMLAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:editDSLXMLAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewDSLXML" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewDSLXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLs" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLsAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLsAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLsByID" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLsByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogSoapIn">
+    <wsdl:part name="parameters" element="tns:editDSLXMLLog" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogSoapOut">
+    <wsdl:part name="parameters" element="tns:editDSLXMLLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:editDSLXMLLogAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:editDSLXMLLogAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="editDSLXMLLogAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLLogSoapIn">
+    <wsdl:part name="parameters" element="tns:getNewDSLXMLLog" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLLogSoapOut">
+    <wsdl:part name="parameters" element="tns:getNewDSLXMLLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="getNewDSLXMLLogctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLLogs" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLLogsAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLLogsAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLLogsAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLStatistics" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsAsDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:getDSLXMLStatisticsAsDataSet" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsAsDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:getDSLXMLStatisticsAsDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getDSLXMLStatisticsAsDataSetctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="copyDSLXMLToLogSoapIn">
+    <wsdl:part name="parameters" element="tns:copyDSLXMLToLog" />
+  </wsdl:message>
+  <wsdl:message name="copyDSLXMLToLogSoapOut">
+    <wsdl:part name="parameters" element="tns:copyDSLXMLToLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="copyDSLXMLToLogctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapIn">
+    <wsdl:part name="parameters" element="tns:ping" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapOut">
+    <wsdl:part name="parameters" element="tns:pingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="queueSoap">
+    <wsdl:operation name="about">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">About  Copyright 2016. Catalina Technology.</wsdl:documentation>
+      <wsdl:input message="tns:aboutSoapIn" />
+      <wsdl:output message="tns:aboutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit xct_tblDSLXML entries.  Calls: xct_spDSLEditDSLXML </wsdl:documentation>
+      <wsdl:input message="tns:editDSLXMLSoapIn" />
+      <wsdl:output message="tns:editDSLXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit xct_tblDSLXML entries.  Calls: xct_spDSLEditDSLXML </wsdl:documentation>
+      <wsdl:input message="tns:editDSLXMLAsDataSetSoapIn" />
+      <wsdl:output message="tns:editDSLXMLAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXML">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank DSLXML object</wsdl:documentation>
+      <wsdl:input message="tns:getNewDSLXMLSoapIn" />
+      <wsdl:output message="tns:getNewDSLXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetDSLXMLs</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLsSoapIn" />
+      <wsdl:output message="tns:getDSLXMLsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetDSLXMLs</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLsAsDataSetSoapIn" />
+      <wsdl:output message="tns:getDSLXMLsAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for DSLXMLs (Queue Items) by xmlGUID</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLsByIDSoapIn" />
+      <wsdl:output message="tns:getDSLXMLsByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a DSLXML (Queue Item) by xmlGUID</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLByExactIDSoapIn" />
+      <wsdl:output message="tns:getDSLXMLByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit xct_tblDSLXMLLog entries.  Calls: xct_spDSLEditDSLXMLLog </wsdl:documentation>
+      <wsdl:input message="tns:editDSLXMLLogSoapIn" />
+      <wsdl:output message="tns:editDSLXMLLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLogAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add/Edit xct_tblDSLXMLLog entries.  Calls: xct_spDSLEditDSLXMLLog </wsdl:documentation>
+      <wsdl:input message="tns:editDSLXMLLogAsDataSetSoapIn" />
+      <wsdl:output message="tns:editDSLXMLLogAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXMLLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">get a blank DSLXMLLog object</wsdl:documentation>
+      <wsdl:input message="tns:getNewDSLXMLLogSoapIn" />
+      <wsdl:output message="tns:getNewDSLXMLLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogs">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetDSLXMLLogs</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLLogsSoapIn" />
+      <wsdl:output message="tns:getDSLXMLLogsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogsAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetDSLXMLLogs</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLLogsAsDataSetSoapIn" />
+      <wsdl:output message="tns:getDSLXMLLogsAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatistics">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLgetDSLXMLStatistics</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLStatisticsSoapIn" />
+      <wsdl:output message="tns:getDSLXMLStatisticsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatisticsAsDataSet">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Calls: xct_spDSLGetDSLXMLStatistics</wsdl:documentation>
+      <wsdl:input message="tns:getDSLXMLStatisticsAsDataSetSoapIn" />
+      <wsdl:output message="tns:getDSLXMLStatisticsAsDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="copyDSLXMLToLog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">copies a DSLXML entry to the DSLXMLLog. calls: xct_spDSLCopyDSLXMLToLog</wsdl:documentation>
+      <wsdl:input message="tns:copyDSLXMLToLogSoapIn" />
+      <wsdl:output message="tns:copyDSLXMLToLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ping service. Types: WEBSERVICE, SQL, ALL</wsdl:documentation>
+      <wsdl:input message="tns:pingSoapIn" />
+      <wsdl:output message="tns:pingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="queueSoap" type="tns:queueSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXML">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editDSLXMLctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLAsDataSet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editDSLXMLAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXML">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewDSLXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewDSLXMLctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLs">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsAsDataSet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLog">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editDSLXMLLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLogAsDataSet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLLogAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:editDSLXMLLogAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXMLLog">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewDSLXMLLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getNewDSLXMLLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogs">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLLogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLLogsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogsAsDataSet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLLogsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLLogsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatistics">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLStatistics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLStatisticsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatisticsAsDataSet">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLStatisticsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getDSLXMLStatisticsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copyDSLXMLToLog">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/copyDSLXMLToLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:copyDSLXMLToLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="queueSoap12" type="tns:queueSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXML">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editDSLXMLctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLAsDataSet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editDSLXMLAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXML">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewDSLXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewDSLXMLctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLs">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsAsDataSet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLsByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLsByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLsByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLog">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editDSLXMLLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="editDSLXMLLogAsDataSet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/editDSLXMLLogAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:editDSLXMLLogAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewDSLXMLLog">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getNewDSLXMLLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getNewDSLXMLLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogs">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLLogs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLLogsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLLogsAsDataSet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLLogsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLLogsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatistics">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLStatistics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLStatisticsctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDSLXMLStatisticsAsDataSet">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getDSLXMLStatisticsAsDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getDSLXMLStatisticsAsDataSetctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="copyDSLXMLToLog">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/copyDSLXMLToLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:copyDSLXMLToLogctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="queue">
+    <wsdl:port name="queueSoap" binding="tns:queueSoap">
+      <soap:address location="http://catalina/ctDynamicsSL/queue.asmx" />
+    </wsdl:port>
+    <wsdl:port name="queueSoap12" binding="tns:queueSoap12">
+      <soap12:address location="http://catalina/ctDynamicsSL/queue.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
