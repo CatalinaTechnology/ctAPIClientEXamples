@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client.projectExpenseTypeMaintenance", "client.projectExpenseTypeMaintenance.csproj", "{131BE942-CAE1-4CD0-9089-4F6E9156E1E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "client.projectEmployeePositionRateMaintenance", "..\client.projectEmployeePositionRateMaintenance\client.projectEmployeePositionRateMaintenance.csproj", "{37363F4B-8355-4997-A37F-AEEC2781BB2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{131BE942-CAE1-4CD0-9089-4F6E9156E1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{131BE942-CAE1-4CD0-9089-4F6E9156E1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{131BE942-CAE1-4CD0-9089-4F6E9156E1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{131BE942-CAE1-4CD0-9089-4F6E9156E1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37363F4B-8355-4997-A37F-AEEC2781BB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37363F4B-8355-4997-A37F-AEEC2781BB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37363F4B-8355-4997-A37F-AEEC2781BB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37363F4B-8355-4997-A37F-AEEC2781BB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

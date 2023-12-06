@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.project.timeAndExpense.maintenance.projectEmployeePositionRateMaintenance.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_project_timeAndExpense_maintenance_projectEmployeePositionRateMaintenance_ctDynamicsSL_project_timeAndExpense_maintenance_projectEmployeePositionRateMaintenance_projectEmployeePositionRateMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/projectEmployeePositionRateMaintenance.asmx</Value>
+    </Setting>
+    <Setting Name="client_project_timeAndExpense_maintenance_projectEmployeePositionRateMaintenance_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

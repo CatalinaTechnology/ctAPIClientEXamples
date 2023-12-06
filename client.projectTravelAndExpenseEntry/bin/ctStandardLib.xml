@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ctStandardLib</name>
+    </assembly>
+    <members>
+        <member name="T:ctStandardLib.scripter.AdditiveOp">
+            <summary>
+            add double or string
+            </summary>
+        </member>
+        <member name="T:ctStandardLib.scripter.Parser">
+            <summary>
+            parse expr
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.scripter.Parser.Parse(System.String)">
+            <summary>
+             
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="T:ctStandardLib.scripter.SR">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.ErrorFormat">
+             <summary>
+               Looks up a localized string similar to {0} at {1},code {2}
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.InternalError">
+             <summary>
+               Looks up a localized string similar to internal error
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.NoParenBefore">
+             <summary>
+               Looks up a localized string similar to not has {0} Before,code {1}
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.NotHexChar">
+            <summary>
+              Looks up a localized string similar to Not a hexadcimal Character.
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.NotSupportGlobalFunction">
+             <summary>
+               Looks up a localized string similar to not support global function
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.ParenNotMatch">
+             <summary>
+               Looks up a localized string similar to {0} not Match,code{1}
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.UnrecogniseChar">
+             <summary>
+               Looks up a localized string similar to unrecognise Character
+            .
+             </summary>
+        </member>
+        <member name="P:ctStandardLib.scripter.SR.VariableNotExist">
+            <summary>
+              Looks up a localized string similar to Variable &apos;{0}&apos; not exist.
+            </summary>
+        </member>
+        <member name="T:ctStandardLib.scripter.StringToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.validator.validateFunction(System.Data.SqlClient.SqlConnection,System.Data.DataTable,System.String,System.Collections.Hashtable)">
+            <summary>
+            Database Class to handle static calls to validate values for a function.
+            Requires dtValidateFunctions table to be passed with columns: FUNCTIONNAME,VALIDATE,ID,VALIDATEVALUE,VALIDATETYPE,ERRORMESSAGE,PARMS,ENCRYPTED
+            As soon as a failure is found, it throws an exception with validation error message.
+            </summary>    
+        </member>
+        <member name="M:ctStandardLib.validator.checkValidateFunction(System.Data.DataTable,System.String)">
+            <summary>
+            Returns true if a function has validation setup in the validate.SERVICECLASS.xml file.
+            </summary>
+            <param name="functionName"></param>
+        </member>
+        <member name="M:ctStandardLib.validator.getValidatedSuccessDataSet">
+            <summary>
+            Called to return a success message for edit functions using actionType=VALIDATEONLY
+            Returns a dataset with a single datatable with columns: errorMessage, resultCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.defaulter.defaultFunction(System.Data.SqlClient.SqlConnection,System.Data.DataTable,System.String,System.Collections.Hashtable)">
+            <summary>
+            Database Class to handle static calls to get default values for a function.
+            Requires dtDefaultFuctions table to be passed with columns: FUNCTIONNAME,DEFAULT,ID,DEFAULTVALUE,DEFAULTTYPE,ERRORMESSAGE,PARMS,ENCRYPTED
+            </summary>    
+        </member>
+        <member name="M:ctStandardLib.defaulter.checkDefaultFunction(System.Data.DataTable,System.String)">
+            <summary>
+            Returns true if a function has validation setup in the validate.SERVICECLASS.xml file.
+            </summary>
+            <param name="functionName"></param>
+        </member>
+        <member name="T:ctStandardLib.db">
+            <summary>
+            Database Class to handle static calls to execute queries and stored procedures
+            </summary>    
+        </member>
+        <member name="M:ctStandardLib.db.getParameters(System.String,System.Data.SqlClient.SqlConnection,System.Data.SqlClient.SqlTransaction)">
+            <summary>
+            Returns the list of paramaters for a stored procedure
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.db.getReturn(System.String,System.Collections.Hashtable,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Executes a stored procedure using the parameters passed.  Will return a dataset from the query
+            </summary>
+            <param name="sql">Name of the stored procedure to execute</param>
+            <param name="parms">Hash table with the name value pairs to pass to the proc.  NOTE:  the name of the parameter must be the same as the parameter in SQL Server</param>
+            <param name="conn">The connection object</param>
+            <returns>DataSet:  Dataset returned from the query</returns>
+        </member>
+        <member name="M:ctStandardLib.db.getReturn(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Runs any query passed in the sql string.  Will return a dataset from the query
+            </summary>
+            <param name="sql">Name of the stored procedure to execute</param>
+            <param name="conn">The connection object</param>
+            <returns>DataSet:  Dataset returned from the query</returns>
+        </member>
+        <member name="M:ctStandardLib.db.getReturnAsXmlDocument(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Runs any query passed in the sql string.  Will return an xmlDocument from the query
+            </summary>
+            <param name="sql">Name of the stored procedure to execute</param>
+            <param name="conn">The connection object</param>
+            <returns>XmlDocument:  returned from the query</returns>
+        </member>
+        <member name="M:ctStandardLib.db.getReturnValue(System.String,System.Collections.Hashtable,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Run a stored procedure using parameters passed.  This will bring back an Int from a return call in the procedure
+            </summary>
+            <param name="sql">Name of the stored procedure to execute</param>
+            <param name="parms">Hash table with the name value pairs to pass to the proc.  NOTE:  the name of the parameter must be the same as the parameter in SQL Server</param>
+            <param name="conn">The connection object</param>
+            <returns>Int32:  Passes back an integer returned from a stored procedure return call</returns>
+        </member>
+        <member name="M:ctStandardLib.db.execute(System.String,System.Collections.Hashtable,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Executes a stored procedure using parameters passed
+            </summary>
+            <param name="sql">Name of the stored procedure to execute</param>
+            <param name="parms">Hash table with the name value pairs to pass to the proc.  NOTE:  the name of the parameter must be the same as the parameter in SQL Server</param>
+            <param name="conn">The connection object</param>
+            <returns>Int32:  1 = success, 0 = fail</returns>
+        </member>
+        <member name="M:ctStandardLib.db.execute(System.String,System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Executes any SQL command passed in the SQL string and passes nothing back
+            </summary>
+            <param name="sql">The sql query wanted to run</param>
+            <param name="conn">The conection object</param>
+        </member>
+        <member name="T:ctStandardLib.ctHelper">
+            <summary>
+            General Helper Class that allows things like encryption, and other grab bag type of functionality
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getNameValuePairsXML(ctStandardLib.nameValuePairs[])">
+            <summary>
+            Returns <nameValuePairs>
+            <key name="name1" value="value1"/>
+            <key name="name2" value="value2"/>
+            </nameValuePairs>
+            </summary>
+            <param name="inpairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.findReplaceCaseInsensitive(System.String,System.String,System.String)">
+            <summary>
+            Does a global case insenstive find/replace 
+            </summary>
+            <param name="inString"></param>
+            <param name="findValue"></param>
+            <param name="replaceValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.wildcardMatch(System.String,System.String,System.Boolean)">
+            <summary>
+            eg:wildcardMatch("ORDERSO12345", "SO1*", false)
+            eg: wildcardMatch("ORDERSO12345", "OR?ER*", false)
+            </summary>
+            <param name="s"></param>
+            <param name="wildcard"></param>
+            <param name="case_sensitive"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.selectDistinct(System.Data.DataTable,System.String)">
+            <summary>
+            Returns a single columned table (fieldName) of distinct values for the field passed
+            </summary>
+            <param name="inTable"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.reduceTable(System.Data.DataTable,System.String)">
+            <summary>
+            Filters a table based on the filterString (sql values) and returns only matching rows
+            </summary>
+            <param name="inTable"></param>
+            <param name="filterString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.convertDataTableToCSV(System.Boolean,System.Data.DataTable)">
+            <summary>
+            Takes a datatable and returns a string of the data in csv format
+            </summary>
+            <param name="bIncludeColumnNames"></param>
+            <param name="dtIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.convertDataTableToTAB(System.Boolean,System.Data.DataTable)">
+            <summary>
+            Takes a datatable and returns a string of the data in TAB format
+            </summary>
+            <param name="bIncludeColumnNames"></param>
+            <param name="dtIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.encryptString(System.String,System.String)">
+            <summary>
+            Encrypts a string with the key passed
+            </summary>
+            <param name="inKey">the encryption key</param>
+            <param name="inString">the string to encrypt</param>
+            <returns>String:  The encrypted value</returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.decryptString(System.String,System.String)">
+            <summary>
+            Decrypts a string with the key passed
+            </summary>
+            <param name="inKey">the encryption key</param>
+            <param name="inString">the string to decrypt</param>
+            <returns>String:  The decrypted value</returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getHash(System.String,System.String)">
+            <summary>
+            Returns a custom hash using a combination of the hashKey and inString
+            </summary>
+            <param name="hashKey"></param>
+            <param name="inString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getHashByType(System.String,System.String,System.String)">
+            <summary>
+            Returns a hash using a combination of the hashType and inString
+            </summary>
+            <param name="hashType">MD5,SHA1,SHA256,SHA512</param>
+            <param name="inString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getURL(System.String,System.String)">
+            <summary>
+            Returns the content of a url.
+            if postData is nonempty string then will do a form post
+            </summary>
+            <param name="tmpURL"></param>
+            <param name="tmpPostData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.createParm(System.String,System.String)">
+            <summary>
+            Returns a copy of the nameValuePairs class with the passed inputs
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getErrorDataSet(System.Exception)">
+            <summary>
+            loops through the passed in System.Exception object and creates a DataSet with 1 table
+            returns a value in getErrorDataSet.Tables[0].Rows[0]["errorMessage"]
+            includes all exception info from: Message,Trace,Source,InnerException.Message,InnerException.Trace,InnerException.Source
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.getErrorDataSet(System.Exception,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            loops through the passed in System.Exception object and creates a DataSet with 1 table
+            returns a value in getErrorDataSet.Tables[0].Rows[0]["errorMessage"]
+            optional flag paramaters define what information is included
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.serializeObject(System.Object)">
+            <summary>
+            Takes a passed in object and serializes it (turns it into a string)
+            </summary>
+            <param name="inObject"></param>
+            <returns>A string of the serialized object</returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.deSerializeObject(System.Type,System.String)">
+            <summary>
+            Takes a string of a serialized object and converts it back into its original object form.
+            Must pass the type, ie: new System.Data.DataSet().GetType();
+            </summary>
+            <param name="inType"></param>
+            <param name="inSerializedObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.fixInvalidGuid(System.String)">
+            <summary>
+            If the passed in guidID is not a valid GUID, returns a static ZERO guid.
+            </summary>
+            <param name="guidID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.checkGuid(System.String)">
+            <summary>
+            Returns true/false on whether the passed in guidID is a valid GUID
+            </summary>
+            <param name="guidID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.returnValidGuid(System.String)">
+            <summary>
+            Converts guidID string into a valid GUID, returns a ZERO GUID if the passed in string is invalid.
+            </summary>
+            <param name="guidID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.ctHelper.createSQLGuid(System.String)">
+            <summary>
+            Takes a passed in guidID string and prepares it for addition to a sql string.
+            If it is valid GUID, it is wrapped in single quotes.
+            If it is not a valid GUID, NULL is passed as a string
+            </summary>
+            <param name="guidID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ctStandardLib.CustomDocument">
+            <summary>
+            XML Document class that overloads the XmlDocument for easy access to attribues, etc.
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.CustomDocument.#ctor(System.String,System.String)">
+            <summary>
+            constructor
+            </summary>
+            <param name="elementName">Element name to start with</param>
+            <param name="idAttributeName">Attribute name that will be used to search against</param>
+        </member>
+        <member name="M:ctStandardLib.CustomDocument.NodeInsertedHandler(System.Object,System.Xml.XmlNodeChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:ctStandardLib.CustomDocument.GetElementByIdAttribute(System.String)">
+            <summary>
+            Returns an element based on the attribute ID passed
+            </summary>
+            <param name="ID">Attribute ID desired to search</param>
+            <returns>XmlElement:  The element that matches the attribute value</returns>
+        </member>
+        <member name="T:ctStandardLib.site">
+            <summary>
+            A class that brings back a configuration site based on siteID.  A site will contain things like sql connection strings and other site based variables
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.site.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.site.#ctor(System.String)">
+            <summary>
+            Constructor:  Passing the siteID
+            </summary>
+            <param name="siteID">The SiteID you want to deal with</param>
+        </member>
+        <member name="M:ctStandardLib.site.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Constructor:  Passes the site, encryption key, and configuration file.  using this constructor will cause the class to automatically load the site based on the siteID
+            </summary>
+            <param name="siteID">Site you want to load from the configuration file</param>
+            <param name="key">Encryption key used to decrypt strings</param>
+            <param name="configFile">Location of the configuration XML file storing all the site data</param>
+        </member>
+        <member name="M:ctStandardLib.site.loadSite">
+            <summary>
+            Loads a site based on what is stored in the public variables:  siteID, key, and configFile
+            </summary>
+            <returns>site:  Returns the "this" class</returns>
+        </member>
+        <member name="M:ctStandardLib.site.loadSite(System.String)">
+            <summary>
+            Loads a site based on the siteID passed.  The system will use the passed siteID but look at the public variables: key and configFile
+            </summary>
+            <param name="siteID">SiteID to pull back</param>
+            <returns>site:  Returns the "this" class</returns>
+        </member>
+        <member name="M:ctStandardLib.site.loadSite(System.String,System.String,System.String)">
+            <summary>
+            Loads a site based on the passed siteID, key, and configFile
+            </summary>
+            <param name="siteID">siteID to pull back</param>
+            <param name="key">Encryption key used to decrypt strings in the configFile for the site</param>
+            <param name="configFile">Location of the configuration xml file containing the sites information</param>
+            <returns>site:  Returns the "this" class</returns>
+        </member>
+        <member name="M:ctStandardLib.site.getConfigField(System.String)">
+            <summary>
+            Returns the string of the configuration variable stored in the site data.  This is used because it has error handlers if a variable that doesnt exist is requested
+            </summary>
+            <param name="fieldName">Name of configuration field</param>
+            <returns>String:  The value of the named configuration field</returns>
+        </member>
+        <member name="M:ctStandardLib.site.getAllSites(System.String,System.String)">
+            <summary>
+            Pulls back an array of all sites in the sites configuration xml file
+            </summary>
+            <param name="configFile">Location of the sites configuration xml file</param>
+            <param name="key">encryption key to decrypt strings</param>
+            <returns>site[]:  an array of site structures containing all the sites in the passed configFile</returns>
+        </member>
+        <member name="P:ctStandardLib.site.configFile">
+            <summary>
+            site configuration XML file containing the sites and their information
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.siteID">
+            <summary>
+            Current siteID
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.key">
+            <summary>
+            Encryption Key used to decrypt strings in the site data
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.licenseKey">
+            <summary>
+            license key for the siteID
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.connectionString">
+            <summary>
+            SQL connection string used for sql calls
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.encryptedConnectionString">
+            <summary>
+            SQL connection string used for sql calls
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.oleConnectionString">
+            <summary>
+            SQL connection string used for sql calls from OLE/Solomon
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.encryptedOLEConnectionString">
+            <summary>
+            encrypted SQL connection string used for sql calls from OLE/Solomon
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.configFields">
+            <summary>
+            A hashtable containing all the user definable configValues contained tied to the current site
+            </summary>
+        </member>
+        <member name="P:ctStandardLib.site.configFieldsTable">
+            <summary>
+            A DataTable containing all the user definable configValues contained tied to the current site
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.xslHelper.transformInMemory(System.Xml.Xsl.XslCompiledTransform,System.Xml.XmlDocument)">
+            <summary>
+             TransformInMemory
+            </summary>
+        </member>
+        <member name="T:ctStandardLib.evalHelper">
+            <summary>
+            Used for evaluating code
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.evalHelper.parseExpr(System.String)">
+            <summary>
+            Will run the code passed in and return value as a string
+            </summary>
+        </member>
+        <member name="T:ctStandardLib.JSONHelper">
+            <summary>
+            Helper class used internally to serialize/deserialize JSON objects
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.JSONHelper.CopyJsonObject``1(``0)">
+            <summary>
+            Perform a deep Copy of the object, using Json as a serialisation method.
+            </summary>
+            <typeparam name="T">The type of object being copied.</typeparam>
+            <param name="source">The object instance to copy.</param>
+            <returns>The copied object.</returns>
+        </member>
+        <member name="T:ctStandardLib.JSONObject">
+            <summary>
+            Base class used for all JSON objects
+            </summary>
+        </member>
+        <member name="M:ctStandardLib.JSONObject.toJSONString">
+            <summary>
+            convert this object to a JSON serialized string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ctStandardLib.JSONObject.toXMLString">
+            <summary>
+            convert this object to a XML serialized string
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

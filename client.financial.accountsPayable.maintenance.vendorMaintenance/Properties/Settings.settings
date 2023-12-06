@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.financial.accountsPayable.maintenance.vendorMaintenance.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_financial_accountsPayable_maintenance_vendorMaintenance_ctDynamicsSL_financial_accountsPayable_maintenance_vendorMaintenance_vendorMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/vendorMaintenance.asmx</Value>
+    </Setting>
+    <Setting Name="client_financial_accountsPayable_maintenance_vendorMaintenance_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

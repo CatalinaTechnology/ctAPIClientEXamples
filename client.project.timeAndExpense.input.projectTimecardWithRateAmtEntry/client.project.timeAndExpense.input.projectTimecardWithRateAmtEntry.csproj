@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{417C1FB7-0337-44AC-960E-9E0F81C97438}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>client.project.timeAndExpense.input.projectTimecardWithRateAmtEntry</RootNamespace>
+    <AssemblyName>client.project.timeAndExpense.input.projectTimecardWithRateAmtEntry</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\client.project.timeAndExpense.input.projectTimecardWithRateAmtEntry.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\client.project.timeAndExpense.input.projectTimecardWithRateAmtEntry.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ctStandardLib">
+      <HintPath>bin\ctStandardLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="employeesPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeesPopup.Designer.cs">
+      <DependentUpon>employeesPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="timecardsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="timecardsPopup.Designer.cs">
+      <DependentUpon>timecardsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ctDynamicsSL.common\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="employeesPopup.resx">
+      <DependentUpon>employeesPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="timecardsPopup.resx">
+      <DependentUpon>timecardsPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\ctDynamicsSL.common\Account.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\AcctXref.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Batch.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\common.wsdl" />
+    <None Include="Web References\ctDynamicsSL.common\company.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Country.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\DSLXML.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\LCCodeClass.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Salesperson.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\SalesTax.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\SegDef.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\SlsTaxCat.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Snote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\State.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\SubAcct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\SubXref.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Terms.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.common\Vendor.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\addressInformationScreen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\billingInformationScreen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\company.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\Currncy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\CuryRtTp.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\CustomerV2.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJACCT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJADDR.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJBILL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJCODE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJCONT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJCONTRL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJEMPLOY.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJINVTXT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJPENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJPENTEX.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJPROJ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJProjEDD.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJPROJEX.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJPTDSUM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJRULEX.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJUTTYPE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\PJ_Account.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\projectMaintenance.wsdl" />
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\Salesperson.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\SalesTax.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\screen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\Snote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\SOAddress.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\SubAcct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\company.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJCODE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJEMPLOY.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJEMPPJT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJLABDET.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJLABHDR.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJPENT.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJPENTEM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJPROJ.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJSITE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJWEEK.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\PJWEEKDateRange.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\projectTimecardWithRateAmtEntry.wsdl" />
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\screen.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\Snote.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\SubAcct.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost/ctDynamicsSL/common.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ctDynamicsSL.common\</RelPath>
+      <UpdateFromURL>http://localhost/ctDynamicsSL/common.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>client_project_timeAndExpense_input_projectTimecardWithRateAmtEntry_ctDynamicsSL_common_common</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/ctDynamicsSL/projectMaintenance.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\</RelPath>
+      <UpdateFromURL>http://localhost/ctDynamicsSL/projectMaintenance.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>client_project_timeAndExpense_input_projectTimecardWithRateAmtEntry_ctDynamicsSL_project_projectController_maintenance_projectMaintenance_projectMaintenance</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/ctDynamicsSL/projectTimecardWithRateAmtEntry.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\</RelPath>
+      <UpdateFromURL>http://localhost/ctDynamicsSL/projectTimecardWithRateAmtEntry.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>client_project_timeAndExpense_input_projectTimecardWithRateAmtEntry_ctDynamicsSL_project_timeAndExpense_input_projectTimecardWithRateAmtEntry_projectTimecardWithRateAmtEntry</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ctDynamicsSL.project.timeAndExpense.input.projectTimecardWithRateAmtEntry\projectTimecardWithRateAmtEntry.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ctDynamicsSL.common\common.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ctDynamicsSL.project.projectController.maintenance.projectMaintenance\projectMaintenance.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

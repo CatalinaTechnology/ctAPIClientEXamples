@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.catalinatechnology.com/services/ctDynamicsSL">
+      <s:element name="about">
+        <s:complexType />
+      </s:element>
+      <s:element name="aboutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aboutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScreenByPoNbr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="poNbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getScreenByPoNbrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getScreenByPoNbrResult" type="tns:screen" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="screen">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="myPurchOrd" type="tns:PurchOrd" />
+          <s:element minOccurs="0" maxOccurs="1" name="myPOTran" type="tns:ArrayOfPOTran" />
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PurchOrd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AckDateTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ASID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatNbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BillShipAddr" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlktExprDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlktPONbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Buyer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BuyerEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CertCompl" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConfirmTo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentNbr" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryEffDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryFreight" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryPOAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryPOItemTotal" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryRate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryRateType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryRcptTotAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTaxTot00" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTaxTot01" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTaxTot02" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTaxTot03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTxblTot00" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTxblTot01" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTxblTot02" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTxblTot03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="EDI" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="FOB" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Freight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastRcptDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineCntr" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenPO" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC_Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerClosed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerEnt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PODate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="POItemTotal" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="PONbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrtBatNbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrtFlg" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptStage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptTotAmt" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReqNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCallID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipAddrID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipAttn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipCustID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipSiteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShiptoID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShiptoType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipVendAddrID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipVendID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipVia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipZip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxCntr00" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxCntr01" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxCntr02" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxCntr03" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID00" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID03" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxTot00" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxTot01" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxTot02" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TaxTot03" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblTot00" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblTot01" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblTot02" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TxblTot03" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendAddr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendAddr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendAddrID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendAttn" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendEmail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendFax" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendZip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VouchStage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WSID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPOTran">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="POTran" nillable="true" type="tns:POTran" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="POTran">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="errorMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="resultCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Acct" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AcctDist" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddlCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddlCostPct" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="AddlCostVouch" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlternateID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AltIDType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="APLineID" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="APLineRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BatNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BMICuryID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMIEffDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMIExtCost" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BMIMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMIRate" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BMIRtTp" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMITranAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMIUnitCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="BMIUnitPrice" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="BOMLineRef" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BOMSequence" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="CnvFact" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CostVouched" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Crtd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Crtd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryAddlCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryAddlCostVouch" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryCostVouched" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryExtCost" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CuryMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryRate" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryTranAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CuryUnitCost" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="DrCr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExtCost" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExtWeight" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlatRateLineNbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="InvtID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JrnlType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Labor_Class_Cd" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LineNbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineRef" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LUpd_DateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_Prog" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUpd_User" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NoteID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrigRcptDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrigRcptNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OrigRetRcptNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC_Flag" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PC_Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerEnt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerPost" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="POLineID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="POLineNbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="POLIneRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PONbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="POOriginal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Qty" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="QtyVouched" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptConvFact" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptLineRefOrig" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptMultDiv" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptNbrOrig" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RcptQty" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="RcptUnitDescr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonCd" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Refnbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future02" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future03" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future04" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future05" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future06" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future07" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future08" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future09" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="S4Future10" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future11" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="S4Future12" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCallID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SiteID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SOLineID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOLineRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOOrdNbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SOTypeID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecificCostID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StepNbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SvcContractID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SvcLineNbr" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaskID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxIDDflt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TranAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TranDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitCost" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitDescr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnitMultDiv" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitWeight" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User3" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="User4" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="User7" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="User8" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VouchStage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WhseLoc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WIP_COGS_Acct" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WIP_COGS_Sub" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOBomRef" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOCostType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WONbr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WOStepNbr" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ctDynamicsSLHeader" type="tns:ctDynamicsSLHeader" />
+      <s:complexType name="ctDynamicsSLHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cpnyID" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="getPurchaseOrdersByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="poNbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchaseOrdersByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchaseOrdersByIDResult" type="tns:ArrayOfPurchOrd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPurchOrd">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PurchOrd" nillable="true" type="tns:PurchOrd" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPurchaseOrderByExactID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="poNbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchaseOrderByExactIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchaseOrderByExactIDResult" type="tns:PurchOrd" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPOTransByPoNbr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="poNbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPOTransByPoNbrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPOTransByPoNbrResult" type="tns:ArrayOfPOTran" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="siteKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="licenseExpiration" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="softwareName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="pingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="aboutSoapIn">
+    <wsdl:part name="parameters" element="tns:about" />
+  </wsdl:message>
+  <wsdl:message name="aboutSoapOut">
+    <wsdl:part name="parameters" element="tns:aboutResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByPoNbrSoapIn">
+    <wsdl:part name="parameters" element="tns:getScreenByPoNbr" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByPoNbrSoapOut">
+    <wsdl:part name="parameters" element="tns:getScreenByPoNbrResponse" />
+  </wsdl:message>
+  <wsdl:message name="getScreenByPoNbrctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrdersByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchaseOrdersByID" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrdersByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchaseOrdersByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrdersByIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrderByExactIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchaseOrderByExactID" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrderByExactIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchaseOrderByExactIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseOrderByExactIDctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="getPOTransByPoNbrSoapIn">
+    <wsdl:part name="parameters" element="tns:getPOTransByPoNbr" />
+  </wsdl:message>
+  <wsdl:message name="getPOTransByPoNbrSoapOut">
+    <wsdl:part name="parameters" element="tns:getPOTransByPoNbrResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPOTransByPoNbrctDynamicsSLHeader">
+    <wsdl:part name="ctDynamicsSLHeader" element="tns:ctDynamicsSLHeader" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapIn">
+    <wsdl:part name="parameters" element="tns:ping" />
+  </wsdl:message>
+  <wsdl:message name="pingSoapOut">
+    <wsdl:part name="parameters" element="tns:pingResponse" />
+  </wsdl:message>
+  <wsdl:portType name="poReceiptsInquirySoap">
+    <wsdl:operation name="about">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">About  Copyright 2015. Catalina Technology.</wsdl:documentation>
+      <wsdl:input message="tns:aboutSoapIn" />
+      <wsdl:output message="tns:aboutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByPoNbr">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieves a Screen object using the passed poNbr</wsdl:documentation>
+      <wsdl:input message="tns:getScreenByPoNbrSoapIn" />
+      <wsdl:output message="tns:getScreenByPoNbrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrdersByID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for purchase orders by poNbr</wsdl:documentation>
+      <wsdl:input message="tns:getPurchaseOrdersByIDSoapIn" />
+      <wsdl:output message="tns:getPurchaseOrdersByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrderByExactID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for a purchase order entry by poNbr</wsdl:documentation>
+      <wsdl:input message="tns:getPurchaseOrderByExactIDSoapIn" />
+      <wsdl:output message="tns:getPurchaseOrderByExactIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPOTransByPoNbr">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Searches for POTrans by poNbr</wsdl:documentation>
+      <wsdl:input message="tns:getPOTransByPoNbrSoapIn" />
+      <wsdl:output message="tns:getPOTransByPoNbrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ping service. Types: WEBSERVICE, SQL, ALL</wsdl:documentation>
+      <wsdl:input message="tns:pingSoapIn" />
+      <wsdl:output message="tns:pingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="poReceiptsInquirySoap" type="tns:poReceiptsInquirySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByPoNbr">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getScreenByPoNbr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getScreenByPoNbrctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrdersByID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPurchaseOrdersByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPurchaseOrdersByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrderByExactID">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPurchaseOrderByExactID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPurchaseOrderByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPOTransByPoNbr">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPOTransByPoNbr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getPOTransByPoNbrctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="poReceiptsInquirySoap12" type="tns:poReceiptsInquirySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="about">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/about" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getScreenByPoNbr">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getScreenByPoNbr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getScreenByPoNbrctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrdersByID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPurchaseOrdersByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPurchaseOrdersByIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchaseOrderByExactID">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPurchaseOrderByExactID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPurchaseOrderByExactIDctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPOTransByPoNbr">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/getPOTransByPoNbr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:getPOTransByPoNbrctDynamicsSLHeader" part="ctDynamicsSLHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap12:operation soapAction="http://www.catalinatechnology.com/services/ctDynamicsSL/ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="poReceiptsInquiry">
+    <wsdl:port name="poReceiptsInquirySoap" binding="tns:poReceiptsInquirySoap">
+      <soap:address location="http://localhost/ctDynamicsSL/poReceiptsInquiry.asmx" />
+    </wsdl:port>
+    <wsdl:port name="poReceiptsInquirySoap12" binding="tns:poReceiptsInquirySoap12">
+      <soap12:address location="http://localhost/ctDynamicsSL/poReceiptsInquiry.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.ctQueue.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_ctQueue_ctDynamicsSL_queue_queue" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicsSL/queue.asmx</Value>
+    </Setting>
+    <Setting Name="licenseKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="licenseExpiration" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="licenseName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="siteKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="siteID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="cpnyID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="client_ctQueue_ctDynamicsSL_customerMaintenance_customerMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicsSL/customerMaintenance.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.financial.accountsPayable.input.voucherAndAdjustmentEntry.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_financial_accountsPayable_input_voucherAndAdjustmentEntry_ctDynamicsSL_financial_accountsPayable_input_voucherAndAdjustmentEntry_voucherAndAdjustmentEntry" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctapi/services/ctDynamicsSL/voucherAndAdjustmentEntry.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

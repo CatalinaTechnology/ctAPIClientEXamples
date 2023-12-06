@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.customers.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_customers_ctDynamicsSL_customers_customers" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://71.165.18.85/ctDynamicsSL/customers.asmx</Value>
+    </Setting>
+    <Setting Name="client_customers_ctDynamicsSL_common_common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://71.165.18.85/ctDynamicsSL/common.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

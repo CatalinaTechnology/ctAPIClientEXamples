@@ -1,0 +1,3141 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>client.inventoryReceipts</name>
+    </assembly>
+    <members>
+        <member name="F:client.inventoryReceipts.batchesPopup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:client.inventoryReceipts.batchesPopup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:client.inventoryReceipts.batchesPopup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:client.inventoryReceipts.Form1.btnGets_Click(System.Object,System.EventArgs)">
+            <summary>
+            for test purposes, calls all the gets/pvs/lookups in the system
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:client.inventoryReceipts.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:client.inventoryReceipts.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:client.inventoryReceipts.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:client.inventoryReceipts.inventoryPopup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:client.inventoryReceipts.inventoryPopup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:client.inventoryReceipts.inventoryPopup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:client.inventoryReceipts.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.aboutCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editScreenCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editBatchCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editINTranCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsDataSetCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewscreenCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getScreenByBatNbrCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getINTransByBatNbrAndLineNbrCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewBatchCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewINTranCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBatchesByBatNbrCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByIDCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByExactIDCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getReasonCodesByIDCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getLotSerialsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getTransferDocsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getItemCostsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getStkUnitsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBinsByIDCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getSiteIDsCompleted">
+            <remarks/>
+        </member>
+        <member name="E:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.pingCompleted">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.about">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.aboutAsync">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.aboutAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editScreen(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editScreenAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editScreenAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editBatch(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editBatchAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editBatchAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editINTran(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editINTranAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editINTranAsync(System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNote(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsync(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsync(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsDataSet(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsDataSetAsync(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.editNoteAsDataSetAsync(System.String,System.String,client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewscreen(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewscreenAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewscreenAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getScreenByBatNbr(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getScreenByBatNbrAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getScreenByBatNbrAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getINTransByBatNbrAndLineNbr(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getINTransByBatNbrAndLineNbrAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getINTransByBatNbrAndLineNbrAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewBatch(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewBatchAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewBatchAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewINTran(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewINTranAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getNewINTranAsync(client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBatchesByBatNbr(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBatchesByBatNbrAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBatchesByBatNbrAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByID(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByIDAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByIDAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByExactID(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByExactIDAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getInventoryByExactIDAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getReasonCodesByID(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getReasonCodesByIDAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getReasonCodesByIDAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getLotSerials(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getLotSerialsAsync(System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getLotSerialsAsync(System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getTransferDocs(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getTransferDocsAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getTransferDocsAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getItemCosts(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getItemCostsAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getItemCostsAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getStkUnits(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getStkUnitsAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getStkUnitsAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBinsByID(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBinsByIDAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getBinsByIDAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getSiteIDs(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getSiteIDsAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.getSiteIDsAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.ping(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.pingAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.pingAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.inventoryReceipts.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.licenseKey">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.licenseName">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.licenseExpiration">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.softwareName">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.siteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.siteKey">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.userName">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.cpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.flags">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ctDynamicsSLHeader.AnyAttr">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.nameValuePairs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.nameValuePairs.name">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.nameValuePairs.value">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.ExistingSiteFlag">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Invtid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Addr1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Addr2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.AlwaysShip">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Attn">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.City">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.COGSAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.COGSSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Country">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.CpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DfltInvtAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DfltInvtSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DfltRepairBin">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DfltVendorBin">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DicsAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.DiscSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Fax">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.FrtAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.FrtSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.GeoCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRCalcPolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRDaysSupply">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRDemandID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRFutureDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRFuturePolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRLeadTimeID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRPrimaryVendID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSeasonEndDay">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSeasonEndMon">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSeasonStrtDay">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSeasonStrtMon">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRServiceLevel">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSftyStkDays">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSftyStkPct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSftyStkPolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRSourceCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRTargetOrdMethod">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRTargetOrdReq">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.IRTransferSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.MiscAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.MiscSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Name">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Phone">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.ReplMthd">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.REPWhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.RTVWhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Salut">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.SiteId">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.SlsAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.SlsSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.State">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.VisibleForWC">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.vi_SiteWithInvtFlag.Zip">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.ABCCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.AssemblyValid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.BinType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.CountStatus">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.CycleID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.Descr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.InclQtyAvail">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.InvtIDValid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LastBookQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LastCountDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LastVarAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LastVarPct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LastVarQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.MoveClass">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.PickPriority">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.PutAwayPriority">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.ReceiptsValid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.SalesValid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.Selected">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.WhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.WOIssueValid">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LocTable.WOProdValid">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.ClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.CnvFact">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.FromUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.InvtId">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.MultDiv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.ToUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.UnitType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INUnit.User8">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.BMITotCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.CostIdentity">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.LayerType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.Qty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAllocBM">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAllocIN">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAllocOther">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAllocPORet">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAllocSD">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyAvail">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.QtyShipNotInv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.RcptDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.RcptNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.SpecificCostID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.TotCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.UnitCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ItemCost.User8">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.BatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Comment">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.CostBatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.CpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.ExpectedDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.RcptBatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.RcptDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.RcptNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.RefNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.ShipperID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.ShipViaID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Source">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.ToSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.TranDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.TransferType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.TrnsfrDocNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.TrnsfrDoc.User8">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Cost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.ExpDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.LIFODate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.LotSerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.MfgrLotSerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.OrigQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.PrjINQtyAlloc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.PrjINQtyAllocIN">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.PrjINQtyAllocPORet">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.PrjINQtyAllocSO">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.PrjINQtyShipNotInv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAlloc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocBM">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocIN">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocOther">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocPORet">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocProjIN">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocSD">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAllocSO">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyAvail">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyOnHand">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyShipNotInv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.QtyWORlsedDemand">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.RcptDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.ShipConfirmQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.ShipContCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Source">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.SrcOrdNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.StatusDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.WarrantyDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerMst.WhseLoc">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.Descr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.DfltAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.DfltSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.ReasonCD">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.ReasonCode.User8">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ABCCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ApprovedVendor">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.AutoPODropShip">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.AutoPOPolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIDirStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIFOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMILastCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIPDirStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIPFOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIPStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIPVOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BMIVOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.BOLCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Buyer">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ChkOrdQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.COGSAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.COGSSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Color">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.CountStatus">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.CuryListPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.CuryMinPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.CustomFtr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.CycleID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Descr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltPickLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltPOUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltSalesAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltSalesSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltShpnotInvAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltShpnotInvSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltSite">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltSOUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DfltWhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DirStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DiscAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DiscPrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.DiscSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.EOQ">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ExplInvoice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ExplOrder">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ExplPackSlip">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ExplPickList">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ExplShipping">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.FOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.FrtAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.FrtSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.GLClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.InvtAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.InvtSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.InvtType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRCalcPolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRDaysSupply">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRDemandID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRFutureDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRFuturePolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRLeadTimeID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRLinePtQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRMinOnHand">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRModelInvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRRCycDays">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSeasonEndDay">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSeasonEndMon">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSeasonStrtDay">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSeasonStrtMon">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRServiceLevel">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSftyStkDays">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSftyStkPct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSftyStkPolicy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRSourceCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRTargetOrdMethod">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRTargetOrdReq">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.IRTransferSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ItemCommClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Kit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastBookQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastCountDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastVarAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastVarPct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LastVarQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LCVarianceAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LCVarianceSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LeadTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LinkSpecId">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerFxdLen">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerFxdTyp">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerFxdVal">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerIssMthd">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerNumLen">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerNumVal">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LotSerTrack">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MaterialType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MaxOnHand">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MfgClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MfgLeadTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MinGrossProfit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MoveClass">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.MSDS">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Pack">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PDirStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PFOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PPVAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PPVSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PriceClassID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ProdMgrID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ProductionUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PStdCostDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.PVOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ReordPt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ReOrdPtCalc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ReordQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ReOrdQtyCalc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ReplMthd">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.RollupCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.RollupPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.RvsdPrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.S4Future13">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.SafetyStk">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.SafetyStkCalc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Selected">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.SerAssign">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Service">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ShelfLife">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Size">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Source">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StdCostDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkBasePrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkItem">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkRvsdPrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkTaxBasisPrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkVol">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkWt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.StkWtUnit">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Style">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Supplr1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Supplr2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.SupplrItem1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.SupplrItem2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.TaskID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.TaxCat">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.TranStatusCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.Turns">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.UPCCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.UsageRate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.ValMthd">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.VOvhStdCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.WarrantyDays">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Inventory.YTDUsage">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.dtRevisedDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.nID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.sLevelName">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.sTableName">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Snote.sNoteText">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.BatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.CpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.CustID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ExpDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.INTranLineID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.INTranLineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.InvtMult">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.KitID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LineNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LotSerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LotSerRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.MfgrLotSerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.NoQtyUpdate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ParInvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ParLotSerNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Qty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.RcptNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.RecordID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.RefNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Retired">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.Rlsed">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ShipContCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ShipmentNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ToSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.ToWhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.TranDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.TranSrc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.TranTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.TranType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.UnitCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.UnitPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.WarrantyDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.LotSerT.WhseLoc">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.myLotSerT">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Acct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.AcctDist">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ARDocType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ARLineID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ARLineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMICuryID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIEffDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIEstimatedCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIExtCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIMultDiv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIRate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIRtTp">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMITranAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.BMIUnitPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.CmmnPct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.CnvFact">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.COGSAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.COGSSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.CostType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.CpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.DrCr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.EstimatedCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Excpt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ExtCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ExtRefNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.FiscYr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.FlatRateLineNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.InsuffQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.InvtAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.InvtID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.InvtMult">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.InvtSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.IRProcessed">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.JrnlType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.KitID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.KitStdQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LayerType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LineID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LineNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LotSerCntr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OrigBatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OrigJrnlType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OrigLineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OrigRefNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OvrhdAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.OvrhdFlag">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PC_Flag">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PC_ID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PC_Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PerEnt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PerPost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PoNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.PostingOption">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ProjectID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Qty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.QtyUnCosted">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.RcptDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.RcptNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ReasonCd">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.RecordID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.RefNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Retired">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Rlsed">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ServiceCallID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ShipperCpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ShipperID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ShipperLineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ShortQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SlsperID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SpecificCostID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SrcDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SrcLineRef">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SrcNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SrcType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.StdTotalQty">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.Sub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SvcContractID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.SvcLineNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.TaskID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ToSiteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.ToWhseLoc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.TranAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.TranDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.TranDesc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.TranType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.UnitCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.UnitDesc">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.UnitMultDiv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.UnitPrice">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.UseTranCost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.INTran.WhseLoc">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.errorMessage">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.notes">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.resultCode">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Acct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.AutoRev">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.AutoRevCopy">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BalanceType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BankAcct">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BankSub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BaseCuryID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.BatType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.clearamt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Cleared">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Crtd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Crtd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Crtd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CrTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CtrlTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryCrTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryCtrlTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryDepositAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryDrTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryEffDate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryId">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryMultDiv">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryRate">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.CuryRateType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Cycle">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.DateClr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.DateEnt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.DepositAmt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Descr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.DrTot">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.EditScrnNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.GLPostOpt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.JrnlType">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.LedgerID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.LUpd_DateTime">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.LUpd_Prog">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.LUpd_User">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Module">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.NbrCycle">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.NoteID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.OrigBatNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.OrigCpnyID">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.OrigScrnNbr">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.PerEnt">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.PerPost">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Rlsed">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future01">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future02">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future03">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future04">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future05">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future06">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future07">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future08">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future09">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future10">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future11">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.S4Future12">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Status">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.Sub">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User1">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User2">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User3">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User4">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User5">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User6">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User7">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.User8">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.Batch.VOBatNbrForPP">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen.myBatch">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen.myINTran">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen.batchNote">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.screen.errorMessage">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.aboutCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.aboutCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.aboutCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editScreenCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editScreenCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editScreenCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editBatchCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editBatchCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editBatchCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editINTranCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editINTranCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editINTranCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteAsDataSetCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteAsDataSetCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.editNoteAsDataSetCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewscreenCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewscreenCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewscreenCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getScreenByBatNbrCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getScreenByBatNbrCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getScreenByBatNbrCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getINTransByBatNbrAndLineNbrCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getINTransByBatNbrAndLineNbrCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getINTransByBatNbrAndLineNbrCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewBatchCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewBatchCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewBatchCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewINTranCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewINTranCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getNewINTranCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBatchesByBatNbrCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBatchesByBatNbrCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBatchesByBatNbrCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByIDCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByIDCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByIDCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByExactIDCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByExactIDCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getInventoryByExactIDCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getReasonCodesByIDCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getReasonCodesByIDCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getReasonCodesByIDCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getLotSerialsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getLotSerialsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getLotSerialsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getTransferDocsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getTransferDocsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getTransferDocsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getItemCostsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getItemCostsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getItemCostsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getStkUnitsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getStkUnitsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getStkUnitsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBinsByIDCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBinsByIDCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getBinsByIDCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getSiteIDsCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getSiteIDsCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.getSiteIDsCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.pingCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.pingCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:client.inventoryReceipts.ctDynamicsSL.inventoryReceipts.pingCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:client.inventoryReceipts.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:client.inventoryReceipts.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:client.inventoryReceipts.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

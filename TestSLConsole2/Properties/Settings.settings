@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestSLConsole.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SoftwareName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CTAPI</Value>
+    </Setting>
+    <Setting Name="AllowSelfSignedServiceCalls" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TestSLConsole_ctDynamicsSL_orders_orders" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://testServer/ctDynamicsSL/orders.asmx</Value>
+    </Setting>
+    <Setting Name="TestSLConsole_ctDynamicsSL_invoiceAndMemo_invoiceAndMemo" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicssl/invoiceAndMemo.asmx</Value>
+    </Setting>
+    <Setting Name="LicenseExpiration" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1/1/2018</Value>
+    </Setting>
+    <Setting Name="LicenseKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">333DCC0A0883D25D1BB0C3798254D97B6F03C584</Value>
+    </Setting>
+    <Setting Name="SiteKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CTAPI</Value>
+    </Setting>
+    <Setting Name="CpnyID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0060</Value>
+    </Setting>
+    <Setting Name="LicenseName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CATALINA DEMO SYSTEM</Value>
+    </Setting>
+    <Setting Name="TestSLConsole_ctDynamicsSL_purchaseOrders_purchaseOrders" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicssl/purchaseOrders.asmx</Value>
+    </Setting>
+    <Setting Name="TestSLConsole_ctDynamicsSL_projectMaintenance_projectMaintenance" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicssl/projectMaintenance.asmx</Value>
+    </Setting>
+    <Setting Name="SiteID" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DEFAULT</Value>
+    </Setting>
+    <Setting Name="TestSLConsole_ctDynamicsSL_voucherAndAdjustmentEntry_voucherAndAdjustmentEntry" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://catalina/ctDynamicssl/voucherAndAdjustmentEntry.asmx?WSDL</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

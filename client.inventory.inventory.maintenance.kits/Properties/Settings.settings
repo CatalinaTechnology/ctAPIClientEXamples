@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.inventory.inventory.maintenance.kits.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_inventory_inventory_maintenance_kits_ctDynamicsSL_inventory_inventory_maintenance_kits_kits" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/kits.asmx</Value>
+    </Setting>
+    <Setting Name="client_inventory_inventory_maintenance_kits_ctDynamicsSL_inventory_inventory_maintenance_inventoryItems_inventoryItems" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/inventoryItems.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="client.purchasing.inquiries.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="client_purchasing_inquiries_ctDynamicsSL_purchasing_inquiries_poReceiptsInquiry_poReceiptsInquiry" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/poReceiptsInquiry.asmx</Value>
+    </Setting>
+    <Setting Name="client_purchasing_inquiries_ctDynamicsSL_purchasing_inquiries_itemVendorHistory_itemVendorHistory" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/ctDynamicsSL/itemVendorHistory.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
