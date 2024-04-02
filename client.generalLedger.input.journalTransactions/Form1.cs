@@ -116,11 +116,46 @@ namespace client.generalLedger.input.journalTransactions
             newPopup.ShowDialog();
         }
 
-        //Creates an empty new generic batch
+     //Creates an empty new generic batch
         private void btnNew_Click(object sender, EventArgs e)
         {
             myScreen = myJTObj.getNewscreen(null);
+            myScreen.myBatch.CpnyID = System.Configuration.ConfigurationManager.AppSettings["CPNYID"];
+            System.Collections.Generic.List<ctDynamicsSL.financial.generalLedger.input.journalTransactions.GLTran> glTranList = new List<ctDynamicsSL.financial.generalLedger.input.journalTransactions.GLTran>();
+            for(System.Int16 i=0; i<5; i++)
+            {
+                ctDynamicsSL.financial.generalLedger.input.journalTransactions.GLTran tmpLine = new ctDynamicsSL.financial.generalLedger.input.journalTransactions.GLTran();
+                tmpLine.CpnyID = myScreen.myBatch.CpnyID;
+                tmpLine.BaseCuryID = "USD";
+                tmpLine.CuryId = "USD";
+                tmpLine = myJTObj.getNewGLTran(tmpLine);
+                tmpLine.Acct = myJTObj.getAcctXrefsByAcct("", myScreen.myBatch.CpnyID)[0].Acct; //just pick first match
+                tmpLine.CuryCrAmt = 10;
+                tmpLine.LineNbr = i;
+                {
+                    var validate = myJTObj.editGLTran("VALIDATEONLY", tmpLine);
+                    if (!String.IsNullOrWhiteSpace(validate.errorMessage))
+                    {
+                        MessageBox.Show("Error in validating GLTran: " + validate.errorMessage);
+                        return;
+                    }
+                }
+                glTranList.Add(tmpLine);
+            }
+ 
+            myScreen.myGLTran = glTranList.ToArray();
+ 
+            {
+                var validate = myJTObj.editScreen("VALIDATEONLY", myScreen);
+                if (!String.IsNullOrWhiteSpace(validate.errorMessage))
+                {
+                    MessageBox.Show("Error in validating Screen: " + validate.errorMessage);
+                    return;
+                }
+            }
+ 
             myScreen = myJTObj.editScreen("ADD", myScreen);
+ 
             if (myScreen.errorMessage != "")
             {
                 btnRelease.Enabled = false;
